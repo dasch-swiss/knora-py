@@ -507,8 +507,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#-tag" class="md-nav__link">
-    `-tag
+  <a href="#ltresptrgt-tag" class="md-nav__link">
+    &lt;resptr&gt;-tag
   </a>
   
 </li>
@@ -898,8 +898,8 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#-tag" class="md-nav__link">
-    `-tag
+  <a href="#ltresptrgt-tag" class="md-nav__link">
+    &lt;resptr&gt;-tag
   </a>
   
 </li>
@@ -1225,7 +1225,7 @@ Aurora · Ripa · air · ancient history · child · classical antiquity · godd
 
 <h2 id="ltresptr-propgt-tag"><code>&lt;resptr-prop&gt;</code>-tag</h2>
 <p>A link to another resource within Knora</p>
-<h3 id="-tag">`<resptr>-tag</h3>
+<h3 id="ltresptrgt-tag"><code>&lt;resptr&gt;</code>-tag</h3>
 <p>A value containing the XML-internal ID of the resource. If there is a resource deefined as</p>
 <pre><code>&lt;resource label=&quot;EURUS015a&quot; restype=&quot;Postcard&quot; unique_id=&quot;238807&quot;&gt;
 …
@@ -1244,14 +1244,16 @@ The following abbreviations describe this form:
 - <em>yyyy</em> A four-digit numeral that represents the year.
 The value cannot begin with a negative (-) sign or a plus (+) sign.
 0001 is the lexical representation of the year 1 of the Common Era (also known as 1 AD).
-The value cannot be 0000.
-- <em>mm</em> A two-digit numeral that represents the month.
-- <em>dd</em> A two-digit numeral that represents the day.
-- <em>hh_A two-digit numeral (with leading zeros as required) that represents the hours. The value must be between -14 and +14, inclusive.
--_mm</em> A two-digit numeral that represents the minute.
-- <em>ss</em> A two-digit numeral that represents the whole seconds.
-- <em>ssssssssssss</em> Optional. If present, a 1-to-12 digit numeral that represents the fractional seconds.
-- <em>zzzzzz</em> Is required and represents the time zone. Each part of the datetime value that is expressed as a numeric value is constrained to the maximum value within the interval that is determined by the next-higher part of the datetime value. For example, the day value can never be 32 and cannot be 29 for month 02 and year 2002 (February 2002). </p>
+The value cannot be 0000.</p>
+<ul>
+<li><em>mm</em> A two-digit numeral that represents the month.</li>
+<li><em>dd</em> A two-digit numeral that represents the day.</li>
+<li><em>hh_A two-digit numeral (with leading zeros as required) that represents the hours. The value must be between -14 and +14, inclusive.
+-_mm</em> A two-digit numeral that represents the minute.</li>
+<li><em>ss</em> A two-digit numeral that represents the whole seconds.</li>
+<li><em>ssssssssssss</em> Optional. If present, a 1-to-12 digit numeral that represents the fractional seconds.</li>
+<li><em>zzzzzz</em> Is required and represents the time zone. Each part of the datetime value that is expressed as a numeric value is constrained to the maximum value within the interval that is determined by the next-higher part of the datetime value. For example, the day value can never be 32 and cannot be 29 for month 02 and year 2002 (February 2002). </li>
+</ul>
 <p>The timezone is defined as follows:
 - A positive (+) or negative (-) sign that is followed by hh:mm, where the following abbreviations are used:
 - <em>hh</em> A two-digit numeral (with leading zeros as required) that represents the hours. The value must be between -14 and +14, inclusive.

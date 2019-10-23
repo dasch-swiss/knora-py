@@ -1240,26 +1240,26 @@ Aurora · Ripa · air · ancient history · child · classical antiquity · godd
 <p>A time property</p>
 <h3 id="lttimegt-tag"><code>&lt;time&gt;</code>-tag</h3>
 <p>This represents an exact date/time value in the form of <code>yyyy-mm-ddThh:mm:ss.sssssssssssszzzzzz</code>
-The following abbreviations describe this form:
-- <em>yyyy</em> A four-digit numeral that represents the year.
-The value cannot begin with a negative (-) sign or a plus (+) sign.
-0001 is the lexical representation of the year 1 of the Common Era (also known as 1 AD).
-The value cannot be 0000.</p>
+The following abbreviations describe this form:</p>
 <ul>
+<li><em>yyyy</em> A four-digit numeral that represents the year. The value cannot begin with a negative (-) sign or a plus (+) sign. 0001 is the lexical representation of the year 1 of the Common Era (also known as 1 AD).
+The value cannot be 0000.</li>
 <li><em>mm</em> A two-digit numeral that represents the month.</li>
 <li><em>dd</em> A two-digit numeral that represents the day.</li>
-<li><em>hh_A two-digit numeral (with leading zeros as required) that represents the hours. The value must be between -14 and +14, inclusive.
--_mm</em> A two-digit numeral that represents the minute.</li>
+<li>_hh_A two-digit numeral (with leading zeros as required) that represents the hours. The value must be between -14 and +14, inclusive.</li>
+<li><em>mm</em> A two-digit numeral that represents the minute.</li>
 <li><em>ss</em> A two-digit numeral that represents the whole seconds.</li>
 <li><em>ssssssssssss</em> Optional. If present, a 1-to-12 digit numeral that represents the fractional seconds.</li>
 <li><em>zzzzzz</em> Is required and represents the time zone. Each part of the datetime value that is expressed as a numeric value is constrained to the maximum value within the interval that is determined by the next-higher part of the datetime value. For example, the day value can never be 32 and cannot be 29 for month 02 and year 2002 (February 2002). </li>
 </ul>
-<p>The timezone is defined as follows:
-- A positive (+) or negative (-) sign that is followed by hh:mm, where the following abbreviations are used:
-- <em>hh</em> A two-digit numeral (with leading zeros as required) that represents the hours. The value must be between -14 and +14, inclusive.
-- <em>mm</em>  two-digit numeral that represents the minutes. The value of the minutes property must be zero when the hours property is equal to 14.
-- <em>+</em> Indicates that the specified time instant is in a time zone that is ahead of the UTC time by hh hours and mm minutes.
-- <em>-</em> Indicates that the specified time instant is in a time zone that is behind UTC time by hh hours and mm minutes.</p>
+<p>The timezone is defined as follows:</p>
+<ul>
+<li>A positive (+) or negative (-) sign that is followed by hh:mm, where the following abbreviations are used:</li>
+<li><em>hh</em> A two-digit numeral (with leading zeros as required) that represents the hours. The value must be between -14 and +14, inclusive.</li>
+<li><em>mm</em>  two-digit numeral that represents the minutes. The value of the minutes property must be zero when the hours property is equal to 14.</li>
+<li><em>+</em> Indicates that the specified time instant is in a time zone that is ahead of the UTC time by hh hours and mm minutes.</li>
+<li><em>-</em> Indicates that the specified time instant is in a time zone that is behind UTC time by hh hours and mm minutes.</li>
+</ul>
 <p>or</p>
 <ul>
 <li><em>Z</em> The literal Z, which represents the time in UTC (Z represents Zulu time, which is equivalent to UTC). Specifying Z for the time zone is equivalent to specifying +00:00 or -00:00.</li>

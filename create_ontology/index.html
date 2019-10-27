@@ -255,6 +255,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#users" class="md-nav__link">
+    Users
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ontology" class="md-nav__link">
     Ontology
   </a>
@@ -399,6 +406,13 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#users" class="md-nav__link">
+    Users
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#ontology" class="md-nav__link">
     Ontology
   </a>
@@ -512,6 +526,7 @@ the project wic h includes all resources and properties:</p>
   and the description as value. At least one description in one language is required.</li>
 <li><em>keywords</em>: An array of keywords describing the project.</li>
 <li><em>lists</em>: The definition of flat or hierarchical list (thesauri, controlled vocabularies)</li>
+<li><em>users</em>: Array of user definitions that will be added</li>
 <li><em>ontology</em>: The definition of the data model (ontology)</li>
 </ul>
 <p>This a project definition lokks like follows:</p>
@@ -525,6 +540,7 @@ the project wic h includes all resources and properties:</p>
    }
    &quot;keywords&quot;: [&quot;example&quot;, &quot;senseless&quot;],
    &quot;lists&quot;: [],
+   &quot;users&quot;: [],
    &quot;ontology&quot;: {}
 }
 </code></pre>
@@ -570,11 +586,21 @@ A node has the following elements:</p>
 </code></pre>
 
 <p>the <em>lists</em> element is optional.</p>
+<h3 id="users">Users</h3>
+<p>This is an array of <em>user</em>-definitions. A user has the following elements:
+- <em>username</em>: The short username for login
+- <em>email</em>: Unique email that identifies the user
+- <em>givenName</em>: Firstname of the user
+- <em>familyName</em>: Name of the user
+- <em>password</em>: Clear initial password of the user
+- <em>lang</em>: The preferred language of the user: "en", "de", "fr", "it" [optional, default: "en"]
+- <em>projadmin</em>: True, if the user should be a project administrator [optional, default: False]
+- <em>sysadmin</em>: True, if the user should be a system administrator [optional, default: False]</p>
 <h3 id="ontology">Ontology</h3>
 <p>The <em>ontology</em> object contains the definition of the data model. The ontology has
 the following elemens:</p>
 <ul>
-<li><em>name</em>: The name of the ontology. This has to be a CNAME conformant name that can be use as prefix!</li>
+<li><em>name</em>: The name of the ontology. This has to be a NCNAME conformant name that can be use as prefix!</li>
 <li><em>label</em>: Human readable and understandable name of the ontology</li>
 <li><em>resources</em>: Array defining the resources (entities) of the data model</li>
 </ul>

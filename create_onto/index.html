@@ -1,0 +1,1321 @@
+
+
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="shortcut icon" href="../assets/images/dasch-favicon.ico">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
+    
+    
+      
+        <title>Create onto - Knora-Py Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.4dd2dd8d.min.css">
+      
+        <link rel="stylesheet" href="../assets/stylesheets/palette.6a5ad368.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../assets/style/theme.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-blue" data-md-color-accent="deep-blue">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#knora-create-onto" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href=".." title="Knora-Py Documentation" class="md-header-nav__button md-logo" aria-label="Knora-Py Documentation">
+      
+  <img src="../assets/images/dasch-icon-white.svg" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Knora-Py Documentation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Create onto
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Knora-Py Documentation" class="md-nav__button md-logo" aria-label="Knora-Py Documentation">
+      
+  <img src="../assets/images/dasch-icon-white.svg" alt="logo">
+
+    </a>
+    Knora-Py Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Introduction" class="md-nav__link">
+      Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../create_ontology/" title="knora-create_ontology" class="md-nav__link">
+      knora-create_ontology
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../xml2knora/" title="knora-xml-import" class="md-nav__link">
+      knora-xml-import
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../knoractl/" title="Knoractl" class="md-nav__link">
+      Knoractl
+    </a>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-an-ontology-on-a-server" class="md-nav__link">
+    Create an ontology on a server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-an-ontology-from-a-server" class="md-nav__link">
+    Get an ontology from a server
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-ontology-definition-format" class="md-nav__link">
+    JSON ontology definition format
+  </a>
+  
+    <nav class="md-nav" aria-label="JSON ontology definition format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-short-overview" class="md-nav__link">
+    A short overview
+  </a>
+  
+    <nav class="md-nav" aria-label="A short overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prefixes-object" class="md-nav__link">
+    "Prefixes" object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-object" class="md-nav__link">
+    "Project" object
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple-keyvalue-pairs" class="md-nav__link">
+    Simple key/value pairs
+  </a>
+  
+    <nav class="md-nav" aria-label="Simple key/value pairs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shortcode" class="md-nav__link">
+    Shortcode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shortname" class="md-nav__link">
+    Shortname
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#longname" class="md-nav__link">
+    Longname
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descriptions" class="md-nav__link">
+    Descriptions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyobject-pairs" class="md-nav__link">
+    Key/object pairs
+  </a>
+  
+    <nav class="md-nav" aria-label="Key/object pairs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#keywords" class="md-nav__link">
+    Keywords
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lists" class="md-nav__link">
+    Lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#groups" class="md-nav__link">
+    Groups
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#users" class="md-nav__link">
+    Users
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ontology" class="md-nav__link">
+    Ontology
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    Name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label" class="md-nav__link">
+    Label
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#name_1" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label_1" class="md-nav__link">
+    label
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#super" class="md-nav__link">
+    super
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fully-fleshed-out-example-ontology" class="md-nav__link">
+    Fully fleshed out example ontology
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                  
+                
+                
+                <p><a href="https://badge.fury.io/py/knora"><img alt="PyPI version" src="https://badge.fury.io/py/knora.svg" /></a></p>
+<h1 id="knora-create-onto">knora-create-onto</h1>
+<ul>
+<li><code>knora-create-onto create</code> creates an ontology. Furthermore, the script reads a JSON file containing the data model 
+  (ontology) definition, connects to the Knora server and creates the data model.</li>
+<li><code>knora-create-onto get</code> reads an ontology from a server and creates a JSON file that can be used by
+  <code>knora-create-onto create</code></li>
+</ul>
+<h2 id="usage">Usage</h2>
+<h3 id="create-an-ontology-on-a-server">Create an ontology on a server</h3>
+<pre><code class="bash">$ knora-create-onto create [options] data_model_definition.json
+</code></pre>
+
+<p>The above command line supports the following options:</p>
+<ul>
+<li><em>"-s server" | "--server server"</em>: URL of the Knora server [default: localhost:3333].</li>
+<li><em>"-u username" | "--user username"</em>: Username to log into Knora [default: root@example.com].</li>
+<li><em>"-p password" | "--password password"</em>: Password for login to the Knora server [default: test].</li>
+<li><em>"-V" | "--validate"</em>: If this flag is set, only the validation of the JSON runs.</li>
+<li><em>"-l" | "--lists"</em>: This only creates the lists using a <a href="#json-for-lists">simplified schema</a>. Please note
+  that in this case the project <strong>must</strong> exist.</li>
+<li><em>"-v" | "--verbose"</em>: Print out some information about progress</li>
+</ul>
+<p>So for example you can have the command:</p>
+<pre><code>$ knora-create-onto create -s https://api.server data_model_definition.json
+</code></pre>
+
+<h3 id="get-an-ontology-from-a-server">Get an ontology from a server</h3>
+<pre><code class="bash">$ knora-create-onto get [options] output-file
+</code></pre>
+
+<p>The above command line supports the following options:</p>
+<ul>
+<li><em>"-s server" | "--server server"</em>: URL of the Knora server [default: localhost:3333].</li>
+<li><em>"-u username" | "--user username"</em>: Username to log into Knora [default: root@example.com].</li>
+<li><em>"-p password" | "--password password"</em>: Password for login to the Knora server [default: test].</li>
+<li><em>"-P project" | "--project shortcode|shortname|iri"</em>: Shortcode, shortname or iri of project</li>
+<li><em>"-v" | "--verbose"</em>: Print out some information about progress</li>
+</ul>
+<h2 id="json-ontology-definition-format">JSON ontology definition format</h2>
+<h3 id="introduction">Introduction</h3>
+<p>This document contains all the information you need to create an ontology that's used by Knora.</p>
+<p>In the first section you find a rough overview of the ontology definition, all the necessary components with a 
+definition and a short example of the definition.</p>
+<h3 id="a-short-overview">A short overview</h3>
+<p>In the following section, you find all the mentioned parts with a detailed explanation. Right at the beginning we look 
+at the basic fields that belong to an ontology definition. This serves as an overview for you to which you can return 
+at any time while you read the description.</p>
+<p>A complete ontology definition looks like this:</p>
+<pre><code class="json">{
+  &quot;prefixes&quot;: {
+    &quot;foaf&quot;: &quot;http://xmlns.com/foaf/0.1/&quot;,
+    &quot;dcterms&quot;: &quot;http://purl.org/dc/terms/&quot;
+  },
+  &quot;project&quot;: {
+    &quot;shortcode&quot;: &quot;0123&quot;,
+    &quot;shortname&quot;: &quot;BiZ&quot;,
+    &quot;longname&quot;: &quot;Bildung in Zahlen&quot;,
+    &quot;descriptions&quot;: {},
+    &quot;keywords&quot;: [],
+    &quot;lists&quot;: [],
+    &quot;groups&quot;: [],
+    &quot;users&quot;: [],
+    &quot;ontologies&quot;: []
+  }
+}
+</code></pre>
+
+<p>As you can see, only two umbrella terms define our ontology: the "prefixes" object and the "project" object. In the 
+following we take a deeper look into both of them since, as you can see in the example above, 
+both objects have further fine grained definition levels.</p>
+<h4 id="prefixes-object">"Prefixes" object</h4>
+<p>The "prefixes" object contains - as you may already have guessed by the name - the <code>prefixes</code> of <em>external</em> ontologies 
+that are also used in the current project. All prefixes are composed of a keyword, followed by its iri. This is used as 
+a shortcut for later so that you don't always have to specify the full qualified iri but can use the much shorter 
+keyword instead. That means that e.g. instead of addressing a property called "familyname" via 
+<code>http://xmlns.com/foaf/0.1/familyName</code> you can simply use foaf:familyName. </p>
+<p>As you can see in the example below, you can have more then one prefix too. In the example we have "foaf" as well as 
+"dcterms" as our prefixes.</p>
+<pre><code class="json">{
+  &quot;prefixes&quot;: {
+    &quot;foaf&quot;: &quot;http://xmlns.com/foaf/0.1/&quot;,
+    &quot;dcterms&quot;: &quot;http://purl.org/dc/terms/&quot;
+  }
+}
+</code></pre>
+
+<h4 id="project-object">"Project" object</h4>
+<p>Right after the "prefix" object the "project" object has to follow, which contains all resources and properties of the 
+ontology. The "project" object is the bread and butter of the ontology. All its important properties are specified therein. </p>
+<p>As you saw in the complete ontology definition in the beginning, the project definitions <code>requires</code> <strong><em>exactly</em></strong> all 
+of the following datafields:</p>
+<ul>
+<li>shortcode</li>
+<li>shortname</li>
+<li>longname</li>
+<li>keywords</li>
+<li>ontologies</li>
+</ul>
+<p>Whereas the following fields are <code>optional</code> (if one or more of these fields are not
+used, it must be omitted):</p>
+<ul>
+<li>descriptions</li>
+<li>lists</li>
+<li>groups</li>
+<li>users</li>
+</ul>
+<p>So a simple example definition of the "project" object could look like this:</p>
+<pre><code class="json">&quot;project&quot;: {
+   &quot;shortcode&quot;: &quot;0809&quot;,
+   &quot;shortname&quot;: &quot;test&quot; ,
+   &quot;longname&quot;: &quot;Test Example&quot;,
+   &quot;descriptions&quot;: {
+     &quot;en&quot;: &quot;This is a simple example project&quot;,
+     &quot;de&quot;: &quot;Dies ist ein einfaches Beispielprojekt&quot;
+   }
+   &quot;keywords&quot;: [&quot;example&quot;, &quot;simple&quot;],
+   &quot;lists&quot;: […],
+   &quot;groups&quot;: […],
+   &quot;users&quot;: […],
+   &quot;ontology&quot;: {…}
+}
+</code></pre>
+
+<h3 id="simple-keyvalue-pairs">Simple key/value pairs</h3>
+<p>At that point we will go through all of this step by step and take a more in depth view on the individual fields of the 
+"project" object. The first four fields of the "project" object are "key"/"value" pairs. Therefore they are quite simple. </p>
+<h4 id="shortcode">Shortcode</h4>
+<p>It's a hexadecimal string in the range between "0000" and "FFFF" that's used to uniquely identifying the project. The 
+shortcode has to be provided by the DaSCH.</p>
+<h4 id="shortname">Shortname</h4>
+<p>This is a short name (string) for the project. It's ment to be like a nickname. If the name of the project is e.g. 
+"Albus Percival Wulfric Dumbledore", then the shortname for it could be "Albi".</p>
+<h4 id="longname">Longname</h4>
+<p>A longer string that provides the full name of the project. In our example, the longname would be "Albus Percival 
+Wulfric Dumbledore".</p>
+<h4 id="descriptions">Descriptions</h4>
+<p>The descriptions specify the content of the project in <em>exactly</em> one or more strings. These descriptions can be 
+supplied in several languages (currently <em>"en"</em>, <em>"de"</em>, <em>"fr"</em> and <em>"it"</em> are supported). The descriptions have to be 
+given as a JSON object with the language as "key" and the description as "value".  See the example above inside the 
+curly brackets after "descriptions" to see what that means.</p>
+<h3 id="keyobject-pairs">Key/object pairs</h3>
+<p>The following fields are <strong>not</strong> simple "key"/"value" pairs. They do have a key, the value however is another object 
+and therefore has an internal structure. Due to the increased complexity of these objects, they are looked at in more detail.</p>
+<h4 id="keywords">Keywords</h4>
+<p>An array of keywords is used to roughly describe the project in single words. A project that deals e.g. with old 
+monastery manuscripts could possess the keywords "monastery", "manuscripts", "medieval", (...). The array can be empty 
+as well e.i. "keywords": [].</p>
+<h4 id="lists">Lists</h4>
+<!--- Hier sollte eine *gutes" Beispiel aus den GW rein! --->
+
+<p>The list object is used to give the resources of the ontology a taxonomic quality. A taxonomy makes it possible to 
+place a set of objects in subcategories. The big advantage of a taxonomic structure is that the user can subcategorize 
+the objects. This allows the user to formulate his search requests more or less specifically as desired. </p>
+<p>Suppose an ontology is about the animal kingdom. The individual resources of our ontology symbolize individual animal species. It would 
+now be practical if we could search in a query only for animals that belong to the class of mammals. Or one would wish 
+to find only invertebrates. Or one would like to find very specifically only all kinds of small cats. The taxonomy, 
+which is defined in the list object, makes this possible. </p>
+<p>A taxonomy is a hierarchical list of categories in a kind of tree structure. The taxonomy must be complete. This means 
+that the entire set of resources can be mapped to the sub-categorization of the taxonomy. To come back to the previous 
+example: It must not be possible that an animal within our resource set cannot be mapped to a subcategory of our taxonomy. </p>
+<p>The taxonomic-hirarchical structure is mapped using JSON. This is because JSON inherently implements a tree structure as well.</p>
+<p>The root of the taxonomy tree is always the name of the taxonomy. The root always stands alone at the top of the tree. 
+It is followed by any number of levels, on which any number of subcategories can be placed. </p>
+<p>Suppose you want to build a taxonomy of dogs. The root would be the name of the taxonomy e.g. "dogtaxonomy". The next level on 
+the hierarchy could be the wolf, because all dogs are descended from the wolf. So we have one element on root level - 
+the name of the taxonomy, and one element on the next lower level, the wolf (Canis lupus). The wolf, in turn, has four 
+closest relatives: the Matris Optima, the Intermediate, the Leiner and the Inostranzewi. Our taxonomy now looks as 
+follows: On the root-plane we have the name of the taxonomy. As only child node we have the wolf on the second level. 
+This node has four children on the third level. This taxonomy can be continued until we have categorized all kinds of dogs. 
+As a side note: This dog taxonomy has been largely disproved in modern times, but is well suited to represent the 
+structure of a list object. </p>
+<p>As already mentioned, the big advantage of a taxonomic categorization of resources is that we can search for dog breeds 
+very concretely. We can generally filter for "wolf", where we find all dog breeds that exist. Or we can search 
+specifically for "Spaniel", where we find all subcategories of Spaniel, such as Clumber Spaniel or Sussex Spaniel </p>
+<p>It is important to note that a flat taxonomy is also allowed. This means that a taxonomy from exactly two levels is 
+allowed. We have a root level, with the name of the taxonomy, followed by a single level. Within this second level, 
+any number of categories can coexist equally, but since they are on the same level, they are not hierarchically dependent on each other. </p>
+<p>For example, you could define a taxonomy "soccer clubs", which have the categories "FCB", "FCZ", (...) in the second 
+level. FCBasel has no hierarchical connection to FCZürich. Their taxonomic structure is therefore flat.</p>
+<p>A resource can be assigned to a taxonomic node within its properties. So a resource "animal" can have the property 
+"mammal". It is important to note that it is possible that a resource can have more than one taxonomic name. How many 
+different taxonomic names a resource can have depends on its cardinality. If it has only the cardinality of 1, it can 
+have only one taxonomic name. But if it has a cardinality of 10, the property can be used for ten different things - 
+thus potentially supporting ten different taxonomic categories. This is the reason why a property can have more than 
+one taxonomic name. </p>
+<p>A node of the Taxonomy may have the following elements:</p>
+<ul>
+<li><em>name</em>: Name of the node. This should be unique for the given list. The name-element is optional.</li>
+<li><em>labels</em>: Language dependent labels in the form <code>{ "&lt;lang&gt;": "&lt;label&gt;, ... }</code>. The labels-element is mandatory. 
+It needs to specify at least one language.</li>
+<li><em>comments</em>: Language dependent comments (optional) in the form <code>{ "&lt;lang&gt;": "&lt;comment&gt;, ... }</code>. The comments-element 
+is optional.</li>
+<li><em>nodes</em>: Array of subnodes. If you have a non-hierarchical taxonomy (i.e. a taxonomy with only 2 levels, the root 
+level and another level), you don't have child nodes. Therefore the nodes element can be omitted in case of a flat taxonomy. </li>
+</ul>
+<p>Here is an example on how to build a taxonomic structure with the help of JSON:</p>
+<pre><code class="json">    &quot;lists&quot;: [
+      {
+        &quot;name&quot;: &quot;dogtaxonomy&quot;,
+        &quot;labels&quot;: { &quot;de&quot;: &quot;hunderassen&quot;, &quot;en&quot;: &quot;dogbreeds&quot; },
+        &quot;nodes&quot;: [
+          {
+            &quot;name&quot;: &quot;canis lupus&quot;,
+            &quot;labels&quot;: { &quot;en&quot;: &quot;Wolf&quot;, &quot;de&quot;: &quot;Wolf&quot; },
+            &quot;comments&quot;: { &quot;en&quot;: &quot;the original wolf&quot;, &quot;de&quot;: &quot;der originale wolf&quot; },
+            &quot;nodes&quot;: [
+              {
+                &quot;name&quot;: &quot;matris optima&quot;,
+                &quot;labels&quot;: { &quot;en&quot;: &quot;shepherddogs&quot;, &quot;de&quot;: &quot;schäferhunde&quot; }
+              },
+              {
+                &quot;name&quot;: &quot;intermediate&quot;,
+                &quot;labels&quot;: { &quot;en&quot;: &quot;huntingdogs&quot;, &quot;de&quot;: &quot;jagdhunde&quot; }
+              },
+              {
+                &quot;name&quot;: &quot;leiner&quot;,
+                &quot;labels&quot;: { &quot;en&quot;: &quot;greyhounds&quot;, &quot;de&quot;: &quot;windhunde&quot; }
+              },
+              {
+                &quot;name&quot;: &quot;inostranzewi&quot;,
+                &quot;labels&quot;: { &quot;en&quot;: &quot;mastiffs&quot;, &quot;de&quot;: &quot;mastiffs&quot; }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+</code></pre>
+
+<p>As already mentioned before, the <em>lists</em> element is optional. If there are no lists, this element has to be omitted.</p>
+<h4 id="groups">Groups</h4>
+<p>This object contains <em>groups</em>-definitions. This is (only) used to specify the permissions a user gets. A project may 
+define user groups such as "project-admins", "students" etc. and give the members of each group individual permissions.</p>
+<p>A <em>group</em>-defintion has the following elements:
+- <em>name</em>: The name of the group.
+- <em>description</em>: Description of the purpose of the group.
+- <em>selfjoin</em>: True, if users are able to join the group; false, if an administrator must add the users.
+- <em>status</em>: Has the value true if the group is active and false if the group is not active.</p>
+<p>Example:</p>
+<pre><code class="json">    &quot;groups&quot;: [
+      {
+        &quot;name&quot;: &quot;biz-editors&quot;,
+        &quot;description&quot;: &quot;Editors for the BiZ-project&quot;,
+        &quot;selfjoin&quot;: false,
+        &quot;status&quot;: true
+      }
+    ],
+
+</code></pre>
+
+<p>The <em>groups</em> element is optional and can therefore be left out.</p>
+<h4 id="users">Users</h4>
+<p>This object contains <em>user</em>-definitions. You can set user traits here. A user has the following elements:
+- <em>username</em>: The short username for the login. Similar to a nickname. 
+- <em>email</em>: Unique email that identifies the user.
+- <em>givenName</em>: Firstname of the user.
+- <em>familyName</em>: Surname of the user.
+- <em>password</em>: Password of the user.
+- <em>lang</em>: The preferred language of the user: "en", "de", "fr", "it" [optional, default: "en"].
+- <em>projects</em>: List of projects the user belongs to.</p>
+<p>Example:</p>
+<pre><code class="json">    &quot;users&quot;: [
+      {
+        &quot;username&quot;: &quot;bizedit&quot;,
+        &quot;email&quot;: &quot;bizedit@test.org&quot;,
+        &quot;givenName&quot;: &quot;biz-given&quot;,
+        &quot;familyName&quot;: &quot;biz-family&quot;,
+        &quot;password&quot;: &quot;biz1234&quot;,
+        &quot;lang&quot;: &quot;en&quot;,
+        &quot;groups&quot;: [&quot;:biz-editors&quot;],
+        &quot;projects&quot;: [&quot;:admin&quot;,&quot;anything:member&quot;]
+      }
+    ],
+
+</code></pre>
+
+<p>The <em>users</em> element is optional and can therefore be omitted.</p>
+<h4 id="ontology">Ontology</h4>
+<p>Most of the definitions for our ontology will be done under the category "ontology": {} inside of the curly brackets. 
+This is the core of the ontology definition. We know, you've already read a whole lot of text so far, but this section 
+is probably the most important one.</p>
+<p>Firstly lets talk about what an ontology actually is. This is necessary so that afterwards it will get easier to 
+understand, what the different fields of the ontology definition do. </p>
+<p>An ontology is a formally ordered representation of a set of terminologies. Dependencies, relationships and relations 
+between the individual components of the set are recorded and noted in a logical, formal language. In contrast to a 
+taxonomy, which defines a mere hierarchical structure within a range of terms, an ontology is much more a network of 
+information of logical dependencies of term elements. </p>
+<p>A full-fledged ontology thus has to offer at least <em>two</em> things: a set of objects or terms (called resources) - the 
+actual elements of the terminology set - as well as dependency rules that describe the dependencies of the individual 
+resources between one and another (called properties). </p>
+<p>To fully capture everything an ontology has to provide, we use <em>four</em> different elements that describe the resources as 
+well as the dependencies inside our ontology. They are: </p>
+<ul>
+<li><em>name</em></li>
+<li><em>label</em></li>
+<li><em>properties</em></li>
+<li><em>resources</em></li>
+</ul>
+<p>Example:</p>
+<pre><code class="json">    &quot;ontology&quot;: {
+      &quot;name&quot;: &quot;seworon&quot;,
+      &quot;label&quot;: &quot;Secrets of the world ontology&quot;,
+      &quot;properties&quot;: […],
+      &quot;resources&quot;: […]
+    }
+</code></pre>
+
+<p>Now lets see what each field does.</p>
+<h4 id="name">Name</h4>
+<p>First of all, our overall ontology needs a name. After all, we want to create a ontology about a specific subject or set of terms. </p>
+<p>As a "speciality", the <em>name of the ontology</em> has to be a NCNAME conformant name that can be used as prefix. NCNAME 
+means that it has to be a single word without any special characters (like e.g. " . : ! ? # + (...) ") and without any blanks. </p>
+<h4 id="label">Label</h4>
+<p>Since the "name" of your ontology needs to be in this special format, we like to have a human readable and 
+understandable name of the ontology. This is done in the "label".</p>
+<h4 id="properties">Properties</h4>
+<p>At first, it seems a bit illogical to have to define the properties <em>before</em> the resources. After all, a property 
+always describes the characteristics of a <em>resource</em>. However, it is necessary to define the properties <em>before</em> the 
+resources. The reason for that is that a property - a dependency between resources - can be used in our program not 
+only for a single resource but for several. If we would e.g. have a property that describes "is descendent of", we can 
+use this property not only to describe the family relations of a human family but at the same time use the same 
+property to describe the relations of e.g. an animal family. </p>
+<p>A properties-array describes all the properties that are used for our terminology space. It's all the properties that 
+describe all the possible connections and dependencies between our entire set of terms.</p>
+<p>The following should also be mentioned: We are restricted to a list of properties, we can choose from. We can't create 
+our own "new" properties. However, the list is exceptionally large and should cover all the needs for properties we 
+want to choose for our ontology.</p>
+<p>A property has mandatory and optional fields. The following fields are mandatory:
+- <em>name</em>
+- <em>labels</em>
+- <em>object</em>
+- <em>gui_element</em></p>
+<p>The following fields are optional (can be omitted):
+- <em>super</em>
+- <em>gui_attributes</em></p>
+<p><em>name</em></p>
+<p>A name for the property e.g. "idesof"</p>
+<p><em>labels</em></p>
+<p>Similar to the name property, the label describes the property. In contrast to the name, which serves as a pure 
+abbreviation, the label is human readable. Thus, use language dependent, human readable names e.g. "is descendent of".
+The labels-field has the following form: <code>{ "&lt;lang&gt;": "&lt;value&gt;", …}</code>
+where <code>&lt;lang&gt;</code> is either "en", "de", "fr" or "it", and <code>&lt;value&gt;</code> is a string.</p>
+<p><em>object</em></p>
+<p>The "object" defines the data type of the value that the property will store.
+  The following object types are allowed:
+  - <code>TextValue</code>: Represents a text that may contain standoff markup<br />
+<em>gui_elements / gui_attributes</em>:
+    - <code>SimpleText</code>: A GUI element for <em>TextValue</em>. A simple text entry box (one line only). The attributes are:
+      <em>gui_attributes</em>:
+      - <code>maxlength=integer</code> (optional): Maximal length (number of character accepted)
+      - <code>size=integer</code> (optional):  Size (width) of widget
+    - <code>Textarea</code>: A GUI element for <em>TextValue</em>. Presents a multiline textentry box. The optional attributes are:<br />
+<em>gui_attributes</em>:
+      - <code>cols=integer</code> (optional): Number of cols of the textarea
+      - <code>rows=integer</code> (optional): Number of rows of the textarea
+      - <code>width=percent</code> (optional): Width of the field on screen
+      - <code>wrap=soft|hard</code> (optional): Wrapping of text
+    - <code>Richtext</code>: A GUI element for <em>TextValue</em>. Provides a richtext editor.
+      - <em>gui_attributes</em>: No attributes</p>
+<ul>
+<li>
+<p><code>ColorValue</code>: A string in the form "#rrggbb" (standard web color format)<br />
+<em>gui-elements / gui_attributes</em>:</p>
+<ul>
+<li><code>Colorpicker</code>: The only GUI element for <em>ColorValue</em>. It's used to choose a color.
+  <em>gui_attributes</em>:</li>
+<li><code>ncolors=integer</code> (mandatory): Number of colors the color picker should present.</li>
+</ul>
+</li>
+<li>
+<p><code>DateValue</code>: represents a date. It's a string with the format <code>calendar:start:end</code></p>
+<ul>
+<li><em>calender</em> is either <em>GREGORIAN</em> or <em>JULIAN</em></li>
+<li><em>start</em> has the form <em>yyyy</em>-<em>mm</em>-<em>dd</em>. If only the year is given, the precision is to the year. If only the year 
+and month is given, the precision is to the month.</li>
+<li><em>end</em> is optional if the date represents a clearly defined period or uncertainty.  </li>
+</ul>
+<p>In total, a DateValue has the following form: "GREGORIAN:1925:1927-03-22"
+which means anytime in between 1925 and the 22nd March 1927.<br />
+<em>gui-elements / gui_attributes</em>:
+- <code>Date</code>: The only GUI element for <em>DateValue</em>. A date picker gui.<br />
+<em>gui_attributes</em>: No attributes</p>
+</li>
+<li>
+<p><code>DecimalValue</code>: A number with decimal point<br />
+<em>gui-elements / gui_attributes</em>:</p>
+<ul>
+<li><code>Slider</code>: A GUI element for <em>DecimalValue</em>. Provides a slider to select a decimal value.<br />
+<em>gui_attributes</em>:</li>
+<li><code>max=decimal</code> (mandatory): Maximal value</li>
+<li><code>min=decimal</code> (mandatory): Minimal value</li>
+<li><code>SimpleText</code>: A GUI element for <em>TextValue</em>. A simple text entry box (one line only). The attributes
+  "maxlength=integer" and "size=integer" are optional.<br />
+<em>gui_attributes</em>:</li>
+<li><code>maxlength=integer</code> (optional): The maximum number of characters accepted</li>
+<li><code>size=integer"</code> (optional): The size of the input field</li>
+</ul>
+</li>
+<li>
+<p><code>GeomValue</code>: Represents a geometrical shape as JSON.<br />
+<em>gui-elements / gui_attributes</em>:</p>
+<ul>
+<li><code>Geometry</code>: Not Yet Implemented.<br />
+<em>gui_attributes</em>: No attributes</li>
+<li><code>SimpleText</code>: A GUI element for <em>TextValue</em>. A simple text entry box (one line only). The attributes
+  "maxlength=integer" and "size=integer" are optional.<br />
+<em>gui_attributes</em>:</li>
+<li><code>maxlength=integer</code> (optional): The maximum number of characters accepted</li>
+<li><code>size=integer"</code> (optional): The size of the input field</li>
+</ul>
+</li>
+<li>
+<p><code>GeonameValue</code>: Represents a location ID in geonames.org<br />
+<em>gui-elements / gui_attributes</em>:</p>
+<ul>
+<li><code>Geonames</code>: The only GUI element for <em>GeonameValue</em>. Interfaces are with geonames.org and it allows to select a 
+location.
+  <em>gui_attributes</em>: No attributes</li>
+</ul>
+</li>
+<li>
+<p><code>IntValue</code>: Represents an integer value<br />
+<em>gui-elements / gui_attributes</em>:</p>
+<ul>
+<li><code>SimpleText</code>: A GUI element for <em>TextValue</em>. A simple text entry box (one line only). The attributes
+  "maxlength=integer" and "size=integer" are optional.<br />
+<em>gui_attributes</em>:</li>
+<li><code>maxlength=integer</code> (optional): The maximum number of characters accepted</li>
+<li><code>size=integer"</code> (optional): The size of the input field</li>
+<li><code>Spinbox</code>: A GUI element for <em>IntegerValue</em>. A text field with and "up"- and "down"-button for
+  increment/decrement. The attributes "max=decimal" and "min=decimal" are optional.<br />
+<em>gui_attributes</em>:</li>
+<li><code>max=integer</code> (optional): Maximal value</li>
+<li><code>min=integer</code> (optional): Minimal value</li>
+</ul>
+</li>
+<li>
+<p><code>BooleanValue</code>: Represents a Boolean ("true" or "false)<br />
+<em>gui-elements / gui_attributes</em>:</p>
+<ul>
+<li><code>Checkbox</code>: A GUI element for <em>BooleanValue</em>.<br />
+<em>gui_attributes</em>: No attributes</li>
+</ul>
+</li>
+<li>
+<p><code>UriValue</code>: : Represents an URI<br />
+<em>gui-elements / gui_attributes</em>:</p>
+<ul>
+<li><code>SimpleText</code>: A GUI element for <em>TextValue</em>. A simple text entry box (one line only). The attributes
+  "maxlength=integer" and "size=integer" are optional.<br />
+<em>gui_attributes</em>:</li>
+<li><code>maxlength=integer</code> (optional): The maximum number of characters accepted</li>
+<li><code>size=integer"</code> (optional): The size of the input field</li>
+</ul>
+</li>
+<li>
+<p><code>IntervalValue</code>: Represents a time-interval<br />
+<em>gui-elements / gui_attributes</em>:</p>
+<ul>
+<li><code>SimpleText</code>: A GUI element for <em>TextValue</em>. A simple text entry box (one line only). The attributes
+  "maxlength=integer" and "size=integer" are optional.<br />
+<em>gui_attributes</em>:</li>
+<li><code>maxlength=integer</code> (optional): The maximum number of characters accepted</li>
+<li><code>size=integer"</code> (optional): The size of the input field</li>
+<li><code>Interval</code>: Not Yet Implemented.<br />
+<em>gui_attributes</em>: No attributes</li>
+</ul>
+</li>
+<li>
+<p><code>ListValue</code>: Represents a node of a (possibly hierarchical) list<br />
+<em>gui-elements / gui_attributes</em>:</p>
+<ul>
+<li><code>Radio</code>: A GUI element for <em>ListValue</em>. A set of radio buttons. This works only with flat lists!<br />
+<em>gui_attributes</em>:</li>
+<li><code>hlist=&lt;list-name&gt;</code> (mandatory): The reference of a <a href="#lists">list</a> root node</li>
+<li><code>List</code>: A GUI element for <em>ListValue</em>. A list of values to select one from.<br />
+<em>gui_attributes</em>:</li>
+<li><code>hlist=&lt;list-name&gt;</code> (mandatory): The reference of a <a href="#lists">list</a> root node</li>
+<li><code>Pulldown</code>: A GUI element for <em>ListValue</em>. Pulldown for list values. Works also for hierarchical lists.<br />
+<em>gui_attributes</em>:</li>
+<li><code>hlist=&lt;list-name&gt;</code> (mandatory): The reference of a <a href="#lists">list</a> root node</li>
+</ul>
+</li>
+<li>
+<p><code>LinkValue</code>: Represents a link to another resource<br />
+<em>gui-elements/gui_attributes</em>:</p>
+<ul>
+<li><code>Searchbox</code>: Must be used with <em>hasLinkTo</em> properties. Allows to search and enter a resource that the
+  given resource should link to. 
+  It has one gui_attribute that indicates how many properties of the found resources should be indicated.
+  It's mandatory!<br />
+<em>gui_attributes</em>:</li>
+<li><code>numprops=integer</code> (mandatory): While dynamically displaying the search result, the number of properties that
+    should be displayed.</li>
+</ul>
+</li>
+<li>
+<p><code>--</code>: Not yet documented<br />
+<em>gui-elements/gui_attributes</em>:</p>
+<ul>
+<li><code>Fileupload</code>: not yet documented!<br />
+<em>gui_attributes</em>: No attributes</li>
+</ul>
+</li>
+</ul>
+<p>Like already mentioned before: The following two fields are optional (can be omitted):</p>
+<p><em>super</em></p>
+<p>A property <strong><em>must</em></strong> be derived from at least one base property. The most generic base property that Knora offers is 
+<em>hasValue</em>. In addition the property may be a subproperty of properties defined in external ontologies. In this case 
+the qualified name - including the prefix - has to be given.
+  The following base properties are defined by Knora:
+  - <code>hasValue</code>: This is the most generic base.
+  - <code>hasLinkTo</code>: This value represents a link to another resource. You have to indicate the "<em>object</em>" as a prefixed 
+  IRI that identifies the resource class this link points to.
+  - <code>hasColor</code>: Defines a color value (<em>ColorValue</em>)
+  - <code>hasComment</code>: Defines a "standard" comment
+  - <code>hasGeometry</code>: Defines a geometry value (a JSON describing a polygon, circle or rectangle), see <em>ColorValue</em>
+  - <code>isPartOf</code>: A special variant of <em>hasLinkTo</em>. It says that an instance of the given resource class is an integral 
+  part of another resource class. E.g. a "page" is part of a "book".
+  - <code>isRegionOf</code>: A special variant of <em>hasLinkTo</em>. It means that the given resource class is a "region" of another 
+  resource class. This is typically used to describe regions of interest in images.
+  - <code>isAnnotationOf</code>: A special variant of <em>hasLinkTo</em>. It denotes the given resource class as an annotation to another 
+  resource class.
+  - <code>seqnum</code>: An integer that is used to define a sequence number in an ordered set of instances.</p>
+<p>To sum the <code>Properties</code> section up, here we have an example for a complete properties definition:</p>
+<pre><code class="json">        &quot;properties&quot;: [
+          {
+            &quot;name&quot;: &quot;schulcode&quot;,
+            &quot;object&quot;: &quot;TextValue&quot;,
+            &quot;labels&quot;: {
+              &quot;de&quot;: &quot;Schulcode&quot;
+            },
+            &quot;gui_element&quot;: &quot;SimpleText&quot;,
+            &quot;gui_attributes&quot;: {
+              &quot;size&quot;: 32,
+              &quot;maxlength&quot;: 128
+            }
+          },
+          {
+            &quot;name&quot;: &quot;schulname&quot;,
+            &quot;object&quot;: &quot;TextValue&quot;,
+            &quot;labels&quot;: {
+              &quot;de&quot;: &quot;Name der Schule&quot;
+            },
+            &quot;gui_element&quot;: &quot;SimpleText&quot;,
+            &quot;gui_attributes&quot;: {
+              &quot;size&quot;: 32,
+              &quot;maxlength&quot;: 128
+            }
+          }
+        ]
+
+</code></pre>
+
+<h4 id="resources">Resources</h4>
+<p>The resource classes are the primary entities of the data model. They are the actual objects/terms inside our 
+terminology space. A resource class is a template for the representation of a real object that is represented in the 
+DaSCH database. A resource class defines properties (aka <em>data fields</em>). For each of these properties a data type as 
+well as the cardinality have to defined.</p>
+<p>A resource needs to have the following fields:</p>
+<h4 id="name_1"><em>name</em></h4>
+<p>A name for the resource.</p>
+<h4 id="label_1"><em>label</em></h4>
+<p>The string displayed of the resource is being accessed.</p>
+<h4 id="super"><em>super</em></h4>
+<p>A resource class is always derived from an other resource. The most generic resource class Knora offers is <em>"Resource"</em>. 
+The following parent predefined resources are provided by Knora:
+  - <em>Resource</em>: A generic "thing" that represents an item from the real world
+  - <em>StillImageRepresentation</em>: An object that is connected to a still image
+  - <em>TextRepresentation</em>: An object that is connected to an (external) text (Not Yet Implemented)
+  - <em>AudioRepresentation</em>: An object representing audio data (Not Yet Implemented)
+  - <em>DDDRepresentation</em>: An object representing a 3-D representation (Not Yet Implemented)
+  - <em>DocumentRepresentation</em>: An object representing an opaque document (e.g. a PDF)
+  - <em>MovingImageRepresentation</em>: An object representing a moving image (video, film)
+  - <em>Annotation</em>: A predefined annotation object. It has the following properties
+  defined:
+    - <em>hasComment</em> (1-n), <em>isAnnotationOf</em> (1)
+  - <em>LinkObj</em>: A resource class linking together several other, generic, resource classes. The class
+  has the following properties: <em>hasComment</em> (1-n), <em>hasLinkTo</em> (1-n)
+  - <em>Region</em>: Represents a simple region. The class has the following properties:
+  <em>hasColor</em> (1), <em>isRegionOf</em> (1) <em>hasGeometry</em> (1), <em>isRegionOf</em> (1), <em>hasComment</em> (0-n)</p>
+<ul>
+<li><em>cardinalities</em>: Array of references to the properties that the resource may hold including the
+   cardinality. A cardinality has the following properties:</li>
+<li><em>propname</em>: The name of the property. If it's used in the form ":"propname, the current ontology is referenced. If 
+   the ":" is omitted, a Knora standard ontology is referenced, otherwise the full prefix of the ontology has to be used.</li>
+<li><em>gui_order</em>: An integer number which will help the GUI to display the properties in the desired
+     order</li>
+<li><em>cardinality</em>: Indicates how often a given property may occur. The possible values
+     are:<ul>
+<li>"1": Exactly once (mandatory one value and only one)</li>
+<li>"0-1": The value may be omitted, but can occur only once</li>
+<li>"1-n": At least one value must be present. But multiple values may be present</li>
+<li>"0-n": The value may be omitted, but may also occur multiple times</li>
+</ul>
+</li>
+</ul>
+<p>Example for a resource definition:</p>
+<pre><code class="json">&quot;resources&quot;: [
+          {
+            &quot;name&quot;: &quot;Schule&quot;,
+            &quot;super&quot;: &quot;Resource&quot;,
+            &quot;labels&quot;: {
+              &quot;de&quot;: &quot;Schule&quot;
+            },
+            &quot;cardinalities&quot;: [
+              {
+                &quot;propname&quot;: &quot;:schulcode&quot;,
+                &quot;gui_order&quot;: 1,
+                &quot;cardinality&quot;: &quot;1&quot;
+              },
+              {
+                &quot;propname&quot;: &quot;:schulname&quot;,
+                &quot;gui_order&quot;: 2,
+                &quot;cardinality&quot;: &quot;1&quot;
+              },
+              {
+                &quot;propname&quot;: &quot;:bildungsgang&quot;,
+                &quot;gui_order&quot;: 3,
+                &quot;cardinality&quot;: &quot;1&quot;
+              }
+            ]
+          }]
+</code></pre>
+
+<h2 id="fully-fleshed-out-example-ontology">Fully fleshed out example ontology</h2>
+<p>Finally, we show a complete example of an ontology definition. </p>
+<pre><code>{
+    &quot;prefixes&quot;: {
+        &quot;foaf&quot;: &quot;http://xmlns.com/foaf/0.1/&quot;,
+        &quot;dcterms&quot;: &quot;http://purl.org/dc/terms/&quot;
+    },
+    &quot;project&quot;: {
+        &quot;shortcode&quot;: &quot;0170&quot;,
+        &quot;shortname&quot;: &quot;teimp&quot;,
+        &quot;longname&quot;: &quot;Test Import&quot;,
+        &quot;descriptions&quot;: {
+            &quot;en&quot;: &quot;This is a project for testing the creation of ontologies and data&quot;,
+            &quot;de&quot;: &quot;Dies ist ein Projekt, um die Erstellung von Ontologien und Datenimport zu testen&quot;
+        },
+        &quot;keywords&quot;: [&quot;test&quot;, &quot;import&quot;],
+        &quot;lists&quot;: [{
+            &quot;name&quot;: &quot;orgtpye&quot;,
+            &quot;labels&quot;: {
+                &quot;de&quot;: &quot;Roganisationsart&quot;,
+                &quot;en&quot;: &quot;Organization Type&quot;
+            },
+            &quot;nodes&quot;: [{
+                    &quot;name&quot;: &quot;business&quot;,
+                    &quot;labels&quot;: {
+                        &quot;en&quot;: &quot;Commerce&quot;,
+                        &quot;de&quot;: &quot;Handel&quot;
+                    },
+                    &quot;comments&quot;: {
+                        &quot;en&quot;: &quot;no comment&quot;,
+                        &quot;de&quot;: &quot;kein Kommentar&quot;
+                    },
+                    &quot;nodes&quot;: [{
+                            &quot;name&quot;: &quot;transport&quot;,
+                            &quot;labels&quot;: {
+                                &quot;en&quot;: &quot;Transportation&quot;,
+                                &quot;de&quot;: &quot;Transport&quot;
+                            }
+                        },
+                        {
+                            &quot;name&quot;: &quot;finances&quot;,
+                            &quot;labels&quot;: {
+                                &quot;en&quot;: &quot;Finances&quot;,
+                                &quot;de&quot;: &quot;Finanzen&quot;
+                            }
+                        }
+                    ]
+                },
+                {
+                    &quot;name&quot;: &quot;society&quot;,
+                    &quot;labels&quot;: {
+                        &quot;en&quot;: &quot;Society&quot;,
+                        &quot;de&quot;: &quot;Gesellschaft&quot;
+                    }
+                }
+            ]
+        }],
+        &quot;ontologies&quot;: [{
+            &quot;name&quot;: &quot;teimp&quot;,
+            &quot;label&quot;: &quot;Test import ontology&quot;,
+            &quot;properties&quot;: [{
+                    &quot;name&quot;: &quot;firstname&quot;,
+                    &quot;super&quot;: [&quot;hasValue&quot;, &quot;foaf:givenName&quot;],
+                    &quot;object&quot;: &quot;TextValue&quot;,
+                    &quot;labels&quot;: {
+                        &quot;en&quot;: &quot;Firstname&quot;,
+                        &quot;de&quot;: &quot;Vorname&quot;
+                    },
+                    &quot;gui_element&quot;: &quot;SimpleText&quot;,
+                    &quot;gui_attributes&quot;: {
+                        &quot;size&quot;: 24,
+                        &quot;maxlength&quot;: 32
+                    }
+                },
+                {
+                    &quot;name&quot;: &quot;lastname&quot;,
+                    &quot;super&quot;: [&quot;hasValue&quot;, &quot;foaf:familyName&quot;],
+                    &quot;object&quot;: &quot;TextValue&quot;,
+                    &quot;labels&quot;: {
+                        &quot;en&quot;: &quot;Lastname&quot;,
+                        &quot;de&quot;: &quot;Nachname&quot;
+                    },
+                    &quot;gui_element&quot;: &quot;SimpleText&quot;,
+                    &quot;gui_attributes&quot;: {
+                        &quot;size&quot;: 24,
+                        &quot;maxlength&quot;: 64
+                    }
+                },
+                {
+                    &quot;name&quot;: &quot;member&quot;,
+                    &quot;super&quot;: [&quot;hasLinkTo&quot;],
+                    &quot;object&quot;: &quot;teimp:organization&quot;,
+                    &quot;labels&quot;: {
+                        &quot;en&quot;: &quot;member of&quot;,
+                        &quot;de&quot;: &quot;Mitglied von&quot;
+                    },
+                    &quot;gui_element&quot;: &quot;Searchbox&quot;
+                },
+                {
+                    &quot;name&quot;: &quot;name&quot;,
+                    &quot;super&quot;: [&quot;hasValue&quot;],
+                    &quot;object&quot;: &quot;TextValue&quot;,
+                    &quot;labels&quot;: {
+                        &quot;en&quot;: &quot;Name&quot;,
+                        &quot;de&quot;: &quot;Name&quot;
+                    },
+                    &quot;gui_element&quot;: &quot;SimpleText&quot;,
+                    &quot;gui_attributes&quot;: {
+                        &quot;size&quot;: 64,
+                        &quot;maxlength&quot;: 64
+                    }
+                },
+                {
+                    &quot;name&quot;: &quot;orgtype&quot;,
+                    &quot;super&quot;: [&quot;hasValue&quot;],
+                    &quot;object&quot;: &quot;ListValue&quot;,
+                    &quot;labels&quot;: {
+                        &quot;en&quot;: &quot;Organizationtype&quot;,
+                        &quot;de&quot;: &quot;Organisationstyp&quot;
+                    },
+                    &quot;comments&quot;: {
+                        &quot;en&quot;: &quot;Type of organization&quot;,
+                        &quot;de&quot;: &quot;Art der Organisation&quot;
+                    },
+                    &quot;gui_element&quot;: &quot;Pulldown&quot;,
+                    &quot;gui_attributes&quot;: {
+                        &quot;hlist&quot;: &quot;orgtype&quot;
+                    }
+                }
+            ],
+            &quot;resources&quot;: [{
+                    &quot;name&quot;: &quot;person&quot;,
+                    &quot;super&quot;: &quot;Resource&quot;,
+                    &quot;labels&quot;: {
+                        &quot;en&quot;: &quot;Person&quot;,
+                        &quot;de&quot;: &quot;Person&quot;
+                    },
+                    &quot;comments&quot;: {
+                        &quot;en&quot;: &quot;Represents a human being&quot;,
+                        &quot;de&quot;: &quot;Repräsentiert eine Person/Menschen&quot;
+                    },
+                    &quot;cardinalities&quot;: [{
+                            &quot;propname&quot;: &quot;:firstname&quot;,
+                            &quot;gui_order&quot;: 1,
+                            &quot;cardinality&quot;: &quot;1&quot;
+                        },
+                        {
+                            &quot;propname&quot;: &quot;:lastname&quot;,
+                            &quot;gui_order&quot;: 2,
+                            &quot;cardinality&quot;: &quot;1&quot;
+                        },
+                        {
+                            &quot;propname&quot;: &quot;:member&quot;,
+                            &quot;gui_order&quot;: 3,
+                            &quot;cardinality&quot;: &quot;0-n&quot;
+                        }
+                    ]
+                },
+                {
+                    &quot;name&quot;: &quot;organization&quot;,
+                    &quot;super&quot;: &quot;Resource&quot;,
+                    &quot;labels&quot;: {
+                        &quot;en&quot;: &quot;Organization&quot;,
+                        &quot;de&quot;: &quot;Organisation&quot;
+                    },
+                    &quot;comments&quot;: {
+                        &quot;en&quot;: &quot;Denotes an organizational unit&quot;,
+                        &quot;de&quot;: &quot;Eine Institution oder Trägerschaft&quot;
+                    },
+                    &quot;cardinalities&quot;: [{
+                            &quot;propname&quot;: &quot;:name&quot;,
+                            &quot;gui_order&quot;: 1,
+                            &quot;cardinality&quot;: &quot;1-n&quot;
+                        },
+                        {
+                            &quot;propname&quot;: &quot;:orgtype&quot;,
+                            &quot;gui_order&quot;: 2,
+                            &quot;cardinality&quot;: &quot;1-n&quot;
+                        }
+                    ]
+                }
+            ]
+        }]
+    }
+}
+</code></pre>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/vendor.3636a4ec.min.js"></script>
+      <script src="../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      
+      <script>
+        app = initialize({
+          base: "..",
+          features: [],
+          search: Object.assign({
+            worker: "../assets/javascripts/worker/search.5eca75d3.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

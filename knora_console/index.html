@@ -15,7 +15,7 @@
     
     
       
-        <title>Knoractl - Knora-Py Documentation</title>
+        <title>knora-console - Knora-Py Documentation</title>
       
     
     
@@ -59,6 +59,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#knora-console" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -82,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Knoractl
+              knora-console
             
           </span>
         </div>
@@ -177,11 +182,96 @@
       
       
 
+  
 
-  <li class="md-nav__item">
-    <a href="../knora_console/" title="knora-console" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        knora-console
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="knora-console" class="md-nav__link md-nav__link--active">
       knora-console
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#connection-to-server" class="md-nav__link">
+    Connection to server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-tab" class="md-nav__link">
+    Project Tab
+  </a>
+  
+    <nav class="md-nav" aria-label="Project Tab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-metadata" class="md-nav__link">
+    Project Metadata
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-new-project" class="md-nav__link">
+    Edit / New project
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-tab" class="md-nav__link">
+    List Tab
+  </a>
+  
+    <nav class="md-nav" aria-label="List Tab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-list" class="md-nav__link">
+    New list
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
     
@@ -201,18 +291,11 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-    
-    <a href="./" title="Knoractl" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../knoractl/" title="Knoractl" class="md-nav__link">
       Knoractl
     </a>
-    
   </li>
 
     
@@ -223,6 +306,83 @@
               </div>
             
             
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#connection-to-server" class="md-nav__link">
+    Connection to server
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-tab" class="md-nav__link">
+    Project Tab
+  </a>
+  
+    <nav class="md-nav" aria-label="Project Tab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#project-metadata" class="md-nav__link">
+    Project Metadata
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#edit-new-project" class="md-nav__link">
+    Edit / New project
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#list-tab" class="md-nav__link">
+    List Tab
+  </a>
+  
+    <nav class="md-nav" aria-label="List Tab">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#new-list" class="md-nav__link">
+    New list
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
@@ -232,9 +392,48 @@
                   
                 
                 
-                  <h1>Knoractl</h1>
-                
-                
+                <p><a href="https://badge.fury.io/py/knora"><img alt="PyPI version" src="https://badge.fury.io/py/knora.svg" /></a></p>
+<h1 id="knora-console">knora-console</h1>
+<p><code>knora-console</code> launches a GUI based app that allows to manipulate a data model on a live server:</p>
+<p><img alt="image" src="../main-empty.png" /></p>
+<h2 id="connection-to-server">Connection to server</h2>
+<p>In order to open the connection to a server, select from the menu <code>Connection -&gt; Open connection...</code> and enter
+the server and credentials:</p>
+<p><img alt="image" src="../connection.png" /></p>
+<p>The app then connects to the server and loads the data.</p>
+<h2 id="project-tab">Project Tab</h2>
+<p>The project tab lists all available project. Below the list, there ate three buttons:</p>
+<ul>
+<li><code>edit</code>: allows to edit the metadata of the selected project</li>
+<li><code>new</code>: allows to create a new project</li>
+<li><code>delete</code>: delete an existing project. This button just marks the project as "not active", but does not erase the
+  project data from the server!</li>
+</ul>
+<h3 id="project-metadata">Project Metadata</h3>
+<p>The project metadata consists of the following fields:</p>
+<ul>
+<li><em>Shortcode</em>: A short code consisting of 4 hexadecimal number assigned by DaSCH to the project</li>
+<li><em>Shortname</em>: A short name (acronym) of the project (must be unique), e.g. "mls"</li>
+<li><em>Longname</em>: A long(er) title of he project, e.g. "Musikalischs Lexikon der Schweiz"</li>
+<li><em>Description</em>: A description of the project describing the context of the data. Please note that the description
+  should be assigned to at least one language, but more than one language is supported! The field "No lang" should
+  not be used (is there for backwards compatibility). </li>
+<li><em>Keywords</em>: Comma separated list of keywords.</li>
+<li><em>Selfjoin</em>: If checked, selfjoin of users is allowd</li>
+<li><em>Status</em>: If checked, the status is "active"</li>
+</ul>
+<h3 id="edit-new-project">Edit / New project</h3>
+<p><img alt="image" src="../project-edit.png" /></p>
+<p>Modifying an existing or creating a new project use the same dialog window with the same fields.</p>
+<p>If a field is changed the [X]-Button on the right side becomes active. Pressing this button restores the original
+value of the field.</p>
+<p>Fields that are grayed out cannot be modifyed (blocked by the Knora backend)</p>
+<h2 id="list-tab">List Tab</h2>
+<p>Lists represent hierarchical taxonomies and are definied within the context of a specific class. Each entry is
+represented by a node that can have children nodes. The root node holds the list name and description
+The list tab displays all lists available. The display can be filtered by project to show only the lists defined
+by one specific project.  </p>
+<h3 id="new-list">New list</h3>
                 
               
               
@@ -253,7 +452,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../xml2knora/" title="knora-xml-import" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../create_onto/" title="knora-create-onto" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -262,11 +461,25 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                knora-xml-import
+                knora-create-onto
               </div>
             </div>
           </a>
         
+        
+          <a href="../xml2knora/" title="knora-xml-import" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                knora-xml-import
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
         
       </nav>
     </div>

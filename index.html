@@ -198,81 +198,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#importing-data-into-the-triple-store-using-the-library" class="md-nav__link">
-    Importing data into the triple store using the library
-  </a>
-  
-    <nav class="md-nav" aria-label="Importing data into the triple store using the library">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#creating-a-knora-access-instance" class="md-nav__link">
-    Creating a Knora access instance
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#getting-the-ontology-schema" class="md-nav__link">
-    Getting the ontology schema
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#creating-resources" class="md-nav__link">
-    Creating resources
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#creating-resources-with-attached-images" class="md-nav__link">
-    Creating resources with attached images
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#complete-example" class="md-nav__link">
-    Complete example
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resetting-the-triplestore-with-knora-reset-triplestore" class="md-nav__link">
-    Resetting the triplestore with knora-reset-triplestore
-  </a>
-  
-    <nav class="md-nav" aria-label="Resetting the triplestore with knora-reset-triplestore">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage:
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bulk-data-import" class="md-nav__link">
-    Bulk data import
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#requirements" class="md-nav__link">
     Requirements
   </a>
@@ -313,8 +238,20 @@
 
 
   <li class="md-nav__item">
-    <a href="create_ontology/" title="knora-create_ontology" class="md-nav__link">
-      knora-create_ontology
+    <a href="create_onto/" title="knora-create-onto" class="md-nav__link">
+      knora-create-onto
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="knora_console/" title="knora-console" class="md-nav__link">
+      knora-console
     </a>
   </li>
 
@@ -374,81 +311,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#importing-data-into-the-triple-store-using-the-library" class="md-nav__link">
-    Importing data into the triple store using the library
-  </a>
-  
-    <nav class="md-nav" aria-label="Importing data into the triple store using the library">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#creating-a-knora-access-instance" class="md-nav__link">
-    Creating a Knora access instance
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#getting-the-ontology-schema" class="md-nav__link">
-    Getting the ontology schema
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#creating-resources" class="md-nav__link">
-    Creating resources
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#creating-resources-with-attached-images" class="md-nav__link">
-    Creating resources with attached images
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#complete-example" class="md-nav__link">
-    Complete example
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#resetting-the-triplestore-with-knora-reset-triplestore" class="md-nav__link">
-    Resetting the triplestore with knora-reset-triplestore
-  </a>
-  
-    <nav class="md-nav" aria-label="Resetting the triplestore with knora-reset-triplestore">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage:
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#bulk-data-import" class="md-nav__link">
-    Bulk data import
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#requirements" class="md-nav__link">
     Requirements
   </a>
@@ -494,14 +356,19 @@
                 
                 <p><a href="https://badge.fury.io/py/knora"><img alt="PyPI version" src="https://badge.fury.io/py/knora.svg" /></a></p>
 <h1 id="knora-py">knora-py</h1>
-<p>knora-py is a python package containing a command line tool for data model (ontology) creation, a library allowing creation of single resources and mass upload using the bulk import of data into the Knora framework.</p>
+<p>knora-py is a python package containing</p>
+<ul>
+<li>a command line tool for data model (ontology) creation and manipulation based on JSON input file</li>
+<li>a gui-based local tool to directly manipulate project data, users, groups and data models on a live server</li>
+<li>Python3 modules that implement CRUD (Create, Read, Update, Delete) operations for projects, users, groups and
+  ontologies</li>
+</ul>
 <p>The package consists of:</p>
 <ul>
-<li><code>Knora</code> Python3 library modules for accessing Knora using the API (ontology creation, data import/export etc.)</li>
-<li><code>knora-create-onto</code> A command line program to create an ontology out of a simple JSON description</li>
-<li><code>knora-xml-import</code> A command line programm to import data into Knora using gthe API</li>
-<li><code>knora-reset-triplestore</code> A command line program to reset the content of the ontology. Does not require
-   a restart of the Knora-Stack.</li>
+<li><code>knora-create-onto</code> A command line program to create an data model from a simple JSON description or to read a
+  data model from a live knora server and dump it into a JSOn file.</li>
+<li><code>knora-console</code> A small GUI app for creating projects ontologies, users and group directly on a live knora server</li>
+<li>a set of python3 modules</li>
 </ul>
 <h2 id="install">Install</h2>
 <p>To install the latest version published on PyPI run:</p>
@@ -516,174 +383,6 @@
 <pre><code>$ python3 setup.py install
 </code></pre>
 
-<h2 id="importing-data-into-the-triple-store-using-the-library">Importing data into the triple store using the library</h2>
-<p>For importing data, you should consider using the <code>knora-xml-knora</code> command line tool
-which reads and validates a simple XML file contining the data too be imported. However,
-You can use the functioons and methods of knora-py directly in your python
-script if yoou prefer so.</p>
-<p>In order to import data, the data has to be read and reformatted. Reading the data
-depends on the dta source and has to be developed by the user. However Knora offers some
-simple methods to add the resource by resource to the Knora backend. Basically You need
-- to create a <em>Knora()</em> access instance
-- get the Ontology schema with a method provided by the Knora instance
-- call repeatedly the method <em>create_resource()</em>.</p>
-<h3 id="creating-a-knora-access-instance">Creating a Knora access instance</h3>
-<p>First You have to import some libraries:</p>
-<pre><code class="python">from typing import List, Set, Dict, Tuple, Optional
-import json
-from jsonschema import validate
-from knora import KnoraError, KnoraStandoffXml, Knora, Sipi
-
-</code></pre>
-
-<p>Then You are ready to create the Knora access isntance. You need to know the server URL of Knora and the login credentials to do so:</p>
-<pre><code class="python">con = Knora(args.server) #  Create the Knora access instance
-con.login(args.user, args.password) #  Perform a login
-
-</code></pre>
-
-<h3 id="getting-the-ontology-schema">Getting the ontology schema</h3>
-<p>The next step is to fetch the ontology (data model) from the Knora server. You need to know
-the project code (usually a <em>string</em> in the form XXXX, where X are characters 0-9, A-F) and
-the name of the ontology.<br />
-<em>Note</em>: This works only with projects that use a single ontology. Support for projects using
-several user defined ontologies has not yet been implemented.</p>
-<pre><code class="python">schema = con.create_schema(args.projectcode, args.ontoname)
-</code></pre>
-
-<h3 id="creating-resources">Creating resources</h3>
-<p>Now You are ready to create the resources (see <a href="#https://github.com/dhlab-basel/knora-py/tree/master/knora#create_resource">create_resource()</a> for details of using this method):</p>
-<pre><code class="python">inst1_info = con.create_resource(schema, &quot;object1&quot;, &quot;obj1_inst1&quot;, {
-    &quot;textprop&quot;: &quot;Dies ist ein Text!&quot;,
-    &quot;intprop&quot;: 7,
-    &quot;listprop&quot;: &quot;options:opt2&quot;,
-    &quot;dateprop&quot;: &quot;1966:CE:1967-05-21&quot;,
-    &quot;decimalprop&quot;: {'value': &quot;3.14159&quot;, 'comment': &quot;Die Zahl PI&quot;},
-    &quot;geonameprop&quot;: &quot;2661604&quot;,
-    &quot;richtextprop&quot;: {
-        'value': KnoraStandoffXml(&quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;UTF-8\&quot;?&gt;\n&lt;text&gt;&lt;p&gt;&lt;strong&gt;this is&lt;/strong&gt; text&lt;/p&gt; with standoff&lt;/text&gt;&quot;),
-        'comment': &quot;Text mit markup&quot;
-    },
-    &quot;intervalprop&quot;: &quot;13.57:15.88&quot;
-})
-</code></pre>
-
-<p>THe call to <em>create_resource()</em> returns a python Dict as follows:</p>
-<pre><code class="python">{
-  'ark': 'http://0.0.0.0:3336/ark:/72163/1/00FE/HJD5LCVFS=qzUPK2=LgX1wZ',
-  'iri': 'http://rdfh.ch/00FE/HJD5LCVFS-qzUPK2-LgX1w',
-  'vark': 'http://0.0.0.0:3336/ark:/72163/1/00FE/HJD5LCVFS=qzUPK2=LgX1wZ.20190620T221223429441Z'
-}
-</code></pre>
-
-<p>The <code>iri</code> can be used to reference this newly created resource in later calls.</p>
-<h3 id="creating-resources-with-attached-images">Creating resources with attached images</h3>
-<p>In order to create a StillImageRepresentation, that is a resource that is connected to an image,
-YOu first have to upload the image usiing Sipi. For this YOu create first an instance of Sipi:</p>
-<pre><code class="python">sipi = Sipi(args.sipi, con.get_token())
-</code></pre>
-
-<p>The access token is taken from the Knora access instance using the method <em>get_tokeen()</em>. The Sipi
-instance is then able to upload images:</p>
-<pre><code class="python">res = sipi.upload_image('example.tif')
-</code></pre>
-
-<p>The parameter to <em>upload_image()</em> is the path to the image file. Currently J2K, TIF, PNG and JPG-imges are supported.</p>
-<p>Now You are read to create the resource:</p>
-<pre><code class="python">fileref = res['uploadedFiles'][0]['internalFilename']
-inst2_info = con.create_resource(
-  schema,
-  &quot;object2&quot;,
-  &quot;obj2_inst1&quot;, {
-    &quot;titleprop&quot;: &quot;Stained glass&quot;,
-    &quot;linkprop&quot;: inst1_info['iri']
-  },
-  fileref)
-</code></pre>
-
-<p>Please note that above example creates a resource that has a link to another resource. It
-uses a link property defined in this example ontology as <em>linkprop</em>.</p>
-<h3 id="complete-example">Complete example</h3>
-<p>The complete example looks as follows:</p>
-<pre><code class="python">import os
-from typing import List, Set, Dict, Tuple, Optional
-from pprint import pprint
-import argparse
-import json
-from jsonschema import validate
-from knora import KnoraError, KnoraStandoffXml, Knora, Sipi
-
-
-parser = argparse.ArgumentParser()
-parser.add_argument(&quot;-s&quot;, &quot;--server&quot;, type=str, default=&quot;http://0.0.0.0:3333&quot;, help=&quot;URL of the Knora server&quot;)
-parser.add_argument(&quot;-S&quot;, &quot;--sipi&quot;, type=str, default=&quot;http://0.0.0.0:1024&quot;, help=&quot;URL of SIPI server&quot;)
-parser.add_argument(&quot;-u&quot;, &quot;--user&quot;, default=&quot;root@example.com&quot;, help=&quot;Username for Knora&quot;)
-parser.add_argument(&quot;-p&quot;, &quot;--password&quot;, default=&quot;test&quot;, help=&quot;The password for login&quot;)
-parser.add_argument(&quot;-P&quot;, &quot;--projectcode&quot;, default=&quot;00FE&quot;, help=&quot;Project short code&quot;)
-parser.add_argument(&quot;-O&quot;, &quot;--ontoname&quot;, default=&quot;kpt&quot;, help=&quot;Shortname of ontology&quot;)
-
-args = parser.parse_args()
-
-
-con = Knora(args.server)
-con.login(args.user, args.password)
-
-schema = con.create_schema(args.projectcode, args.ontoname)
-
-inst1_info = con.create_resource(
-  schema,
-  &quot;object1&quot;,
-  &quot;obj1_inst1&quot;, {
-  &quot;textprop&quot;: &quot;Dies ist ein Text!&quot;,
-  &quot;intprop&quot;: 7,
-  &quot;listprop&quot;: &quot;options:opt2&quot;,
-  &quot;dateprop&quot;: &quot;1966:CE:1967-05-21&quot;,
-  &quot;decimalprop&quot;: {'value': &quot;3.14159&quot;, 'comment': &quot;Die Zahl PI&quot;},
-  &quot;geonameprop&quot;: &quot;2661604&quot;,
-  &quot;richtextprop&quot;: {
-    'value': KnoraStandoffXml(&quot;&lt;?xml version=\&quot;1.0\&quot; encoding=\&quot;UTF-8\&quot;?&gt;\n&lt;text&gt;&lt;p&gt;&lt;strong&gt;this is&lt;/strong&gt; text&lt;/p&gt; with standoff&lt;/text&gt;&quot;),
-    'comment': &quot;Text mit markup&quot;
-  },
-  &quot;intervalprop&quot;: &quot;13.57:15.88&quot;
-})
-pprint(inst1_info)
-
-#first upload image to SIPI
-sipi = Sipi(args.sipi, con.get_token())
-res = sipi.upload_image('example.tif')
-pprint(res)
-
-fileref = res['uploadedFiles'][0]['internalFilename']
-inst2_info = con.create_resource(
-  schema,
-  &quot;object2&quot;,
-  &quot;obj2_inst1&quot;, {
-    &quot;titleprop&quot;: &quot;Stained glass&quot;,
-    &quot;linkprop&quot;: inst1_info['iri']
-  },
-  fileref)
-pprint(inst2_info)
-</code></pre>
-
-<h2 id="resetting-the-triplestore-with-knora-reset-triplestore">Resetting the triplestore with <code>knora-reset-triplestore</code></h2>
-<p>This script reads a JSON file containing the data model (ontology) definition,
-connects to the Knora server and creates the data model.</p>
-<h3 id="usage">Usage:</h3>
-<pre><code class="bash">$ knora-reset-triplestore
-</code></pre>
-
-<p>It supports the following options:</p>
-<ul>
-<li><em>"-s server" | "--server server"</em>: The URl of the Knora server [default: localhost:3333]</li>
-<li><em>"-u username" | "--user username"</em>: Username to log into Knora [default: root@example.com]</li>
-<li><em>"-p password" | "--password password"</em>: The password for login to the Knora server [default: test]</li>
-</ul>
-<p>For resetting of the triplestore through Knora-API to work, it is necessary to start the Knora-API server
-with a configuration parameter allowing this operation (e.g., <code>KNORA_WEBAPI_ALLOW_RELOAD_OVER_HTTP</code>
-environment variable or the corresponding setting in <code>application.conf</code>).</p>
-<h2 id="bulk-data-import">Bulk data import</h2>
-<p>In order to make a bulk data import, a properly formatted XML file has to be created. The python module "knora" contains
-classes and methods to facilitate the creation of such a XML file.</p>
 <h2 id="requirements">Requirements</h2>
 <p>To install the requirements:</p>
 <pre><code class="bash">$ pip3 install -r requirements.txt
@@ -754,13 +453,13 @@ $ pytest
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
         
-          <a href="create_ontology/" title="knora-create_ontology" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="create_onto/" title="knora-create-onto" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                knora-create_ontology
+                knora-create-onto
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

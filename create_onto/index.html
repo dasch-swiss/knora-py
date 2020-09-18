@@ -15,7 +15,7 @@
     
     
       
-        <title>Create onto - Knora-Py Documentation</title>
+        <title>knora-create-onto - Knora-Py Documentation</title>
       
     
     
@@ -87,7 +87,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Create onto
+              knora-create-onto
             
           </span>
         </div>
@@ -170,10 +170,272 @@
       
       
 
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        knora-create-onto
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" title="knora-create-onto" class="md-nav__link md-nav__link--active">
+      knora-create-onto
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    Usage
+  </a>
+  
+    <nav class="md-nav" aria-label="Usage">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-an-ontology-on-a-server" class="md-nav__link">
+    Create an ontology on a server
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#get-an-ontology-from-a-server" class="md-nav__link">
+    Get an ontology from a server
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#json-ontology-definition-format" class="md-nav__link">
+    JSON ontology definition format
+  </a>
+  
+    <nav class="md-nav" aria-label="JSON ontology definition format">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#a-short-overview" class="md-nav__link">
+    A short overview
+  </a>
+  
+    <nav class="md-nav" aria-label="A short overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#prefixes-object" class="md-nav__link">
+    "Prefixes" object
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#project-object" class="md-nav__link">
+    "Project" object
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#simple-keyvalue-pairs" class="md-nav__link">
+    Simple key/value pairs
+  </a>
+  
+    <nav class="md-nav" aria-label="Simple key/value pairs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#shortcode" class="md-nav__link">
+    Shortcode
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#shortname" class="md-nav__link">
+    Shortname
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#longname" class="md-nav__link">
+    Longname
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#descriptions" class="md-nav__link">
+    Descriptions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#keyobject-pairs" class="md-nav__link">
+    Key/object pairs
+  </a>
+  
+    <nav class="md-nav" aria-label="Key/object pairs">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#keywords" class="md-nav__link">
+    Keywords
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lists" class="md-nav__link">
+    Lists
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#groups" class="md-nav__link">
+    Groups
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#users" class="md-nav__link">
+    Users
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ontology" class="md-nav__link">
+    Ontology
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#name" class="md-nav__link">
+    Name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label" class="md-nav__link">
+    Label
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#properties" class="md-nav__link">
+    Properties
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resources" class="md-nav__link">
+    Resources
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#name_1" class="md-nav__link">
+    name
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#label_1" class="md-nav__link">
+    label
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#super" class="md-nav__link">
+    super
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fully-fleshed-out-example-ontology" class="md-nav__link">
+    Fully fleshed out example ontology
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+      
+      
+      
+
 
   <li class="md-nav__item">
-    <a href="../create_ontology/" title="knora-create_ontology" class="md-nav__link">
-      knora-create_ontology
+    <a href="../knora_console/" title="knora-console" class="md-nav__link">
+      knora-console
     </a>
   </li>
 
@@ -462,11 +724,13 @@
                 
                 <p><a href="https://badge.fury.io/py/knora"><img alt="PyPI version" src="https://badge.fury.io/py/knora.svg" /></a></p>
 <h1 id="knora-create-onto">knora-create-onto</h1>
+<p>The command <code>create-onto</code> can be used to upload a data model (ontology) from a JSON file to a knora server, or to dump
+a data model from a knora server to a JSON file.</p>
 <ul>
 <li><code>knora-create-onto create</code> creates an ontology. Furthermore, the script reads a JSON file containing the data model 
   (ontology) definition, connects to the Knora server and creates the data model.</li>
-<li><code>knora-create-onto get</code> reads an ontology from a server and creates a JSON file that can be used by
-  <code>knora-create-onto create</code></li>
+<li><code>knora-create-onto get</code> reads an ontology from a server and creates a JSON file that can be used again by
+  <code>knora-create-onto create</code> to implement the data model on another server</li>
 </ul>
 <h2 id="usage">Usage</h2>
 <h3 id="create-an-ontology-on-a-server">Create an ontology on a server</h3>
@@ -1286,6 +1550,41 @@ The following parent predefined resources are provided by Knora:
       
         
 <footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href=".." title="Introduction" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Introduction
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../knora_console/" title="knora-console" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                knora-console
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

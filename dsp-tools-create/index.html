@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -11,27 +9,29 @@
       
       
       <link rel="shortcut icon" href="../assets/images/dasch-favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.2">
     
     
       
-        <title>knora-create-onto - Knora-Py Documentation</title>
+        <title>JSON data model format - Knora-Py Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.4dd2dd8d.min.css">
-      
-        <link rel="stylesheet" href="../assets/stylesheets/palette.6a5ad368.min.css">
-      
+      <link rel="stylesheet" href="../assets/stylesheets/main.19190aaf.min.css">
       
         
+        <link rel="stylesheet" href="../assets/stylesheets/palette.24b84193.min.css">
         
-        <meta name="theme-color" content="">
+          
+          
+          <meta name="theme-color" content="">
+        
       
     
     
     
       
+        
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
@@ -51,16 +51,18 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-blue" data-md-color-accent="deep-blue">
-  
     
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-blue" data-md-color-accent="deep-blue">
+      
+  
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
         
-        <a href="#knora-create-onto" class="md-skip">
+        <a href="#json-ontology-definition-format" class="md-skip">
           Skip to content
         </a>
       
@@ -69,7 +71,9 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href=".." title="Knora-Py Documentation" class="md-header-nav__button md-logo" aria-label="Knora-Py Documentation">
       
@@ -87,7 +91,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              knora-create-onto
+              JSON data model format
             
           </span>
         </div>
@@ -130,8 +134,6 @@
     
     <div class="md-container" data-md-component="container">
       
-        
-      
       
         
       
@@ -142,7 +144,9 @@
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Knora-Py Documentation" class="md-nav__button md-logo" aria-label="Knora-Py Documentation">
       
@@ -160,8 +164,20 @@
 
 
   <li class="md-nav__item">
-    <a href=".." title="Introduction" class="md-nav__link">
+    <a href=".." class="md-nav__link">
       Introduction
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../dsp-tools/" class="md-nav__link">
+      dsp-tools
     </a>
   </li>
 
@@ -181,12 +197,12 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        knora-create-onto
+        JSON data model format
         <span class="md-nav__icon md-icon"></span>
       </label>
     
-    <a href="./" title="knora-create-onto" class="md-nav__link md-nav__link--active">
-      knora-create-onto
+    <a href="./" class="md-nav__link md-nav__link--active">
+      JSON data model format
     </a>
     
       
@@ -203,48 +219,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-    <nav class="md-nav" aria-label="Usage">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#create-an-ontology-on-a-server" class="md-nav__link">
-    Create an ontology on a server
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-an-ontology-from-a-server" class="md-nav__link">
-    Get an ontology from a server
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#json-ontology-definition-format" class="md-nav__link">
-    JSON ontology definition format
-  </a>
-  
-    <nav class="md-nav" aria-label="JSON ontology definition format">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
     Introduction
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#a-short-overview" class="md-nav__link">
     A short overview
   </a>
@@ -270,8 +251,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#simple-keyvalue-pairs" class="md-nav__link">
     Simple key/value pairs
   </a>
@@ -311,8 +292,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#keyobject-pairs" class="md-nav__link">
     Key/object pairs
   </a>
@@ -404,20 +385,15 @@
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#cardinalities" class="md-nav__link">
+    Cardinalities
+  </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fully-fleshed-out-example-ontology" class="md-nav__link">
-    Fully fleshed out example ontology
-  </a>
   
 </li>
       
@@ -434,32 +410,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../knora_console/" title="knora-console" class="md-nav__link">
-      knora-console
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../xml2knora/" title="knora-xml-import" class="md-nav__link">
-      knora-xml-import
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../knoractl/" title="Knoractl" class="md-nav__link">
-      Knoractl
+    <a href="../dsp-tools-xmlupload/" class="md-nav__link">
+      Bulk data import
     </a>
   </li>
 
@@ -488,48 +440,13 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage
-  </a>
-  
-    <nav class="md-nav" aria-label="Usage">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#create-an-ontology-on-a-server" class="md-nav__link">
-    Create an ontology on a server
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#get-an-ontology-from-a-server" class="md-nav__link">
-    Get an ontology from a server
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#json-ontology-definition-format" class="md-nav__link">
-    JSON ontology definition format
-  </a>
-  
-    <nav class="md-nav" aria-label="JSON ontology definition format">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#introduction" class="md-nav__link">
     Introduction
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#a-short-overview" class="md-nav__link">
     A short overview
   </a>
@@ -555,8 +472,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#simple-keyvalue-pairs" class="md-nav__link">
     Simple key/value pairs
   </a>
@@ -596,8 +513,8 @@
     </nav>
   
 </li>
-        
-          <li class="md-nav__item">
+      
+        <li class="md-nav__item">
   <a href="#keyobject-pairs" class="md-nav__link">
     Key/object pairs
   </a>
@@ -689,20 +606,15 @@
   
 </li>
         
-      </ul>
-    </nav>
+          <li class="md-nav__item">
+  <a href="#cardinalities" class="md-nav__link">
+    Cardinalities
+  </a>
   
 </li>
         
       </ul>
     </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fully-fleshed-out-example-ontology" class="md-nav__link">
-    Fully fleshed out example ontology
-  </a>
   
 </li>
       
@@ -719,61 +631,17 @@
               
                 
                 
-                  
-                
-                
-                <p><a href="https://badge.fury.io/py/knora"><img alt="PyPI version" src="https://badge.fury.io/py/knora.svg" /></a></p>
-<h1 id="knora-create-onto">knora-create-onto</h1>
-<p>The command <code>create-onto</code> can be used to upload a data model (ontology) from a JSON file to a knora server, or to dump
-a data model from a knora server to a JSON file.</p>
-<ul>
-<li><code>knora-create-onto create</code> creates an ontology. Furthermore, the script reads a JSON file containing the data model 
-  (ontology) definition, connects to the Knora server and creates the data model.</li>
-<li><code>knora-create-onto get</code> reads an ontology from a server and creates a JSON file that can be used again by
-  <code>knora-create-onto create</code> to implement the data model on another server</li>
-</ul>
-<h2 id="usage">Usage</h2>
-<h3 id="create-an-ontology-on-a-server">Create an ontology on a server</h3>
-<pre><code class="bash">$ knora-create-onto create [options] data_model_definition.json
-</code></pre>
-
-<p>The above command line supports the following options:</p>
-<ul>
-<li><em>"-s server" | "--server server"</em>: URL of the Knora server [default: localhost:3333].</li>
-<li><em>"-u username" | "--user username"</em>: Username to log into Knora [default: root@example.com].</li>
-<li><em>"-p password" | "--password password"</em>: Password for login to the Knora server [default: test].</li>
-<li><em>"-V" | "--validate"</em>: If this flag is set, only the validation of the JSON runs.</li>
-<li><em>"-l" | "--lists"</em>: This only creates the lists using a <a href="#json-for-lists">simplified schema</a>. Please note
-  that in this case the project <strong>must</strong> exist.</li>
-<li><em>"-v" | "--verbose"</em>: Print out some information about progress</li>
-</ul>
-<p>So for example you can have the command:</p>
-<pre><code>$ knora-create-onto create -s https://api.server data_model_definition.json
-</code></pre>
-
-<h3 id="get-an-ontology-from-a-server">Get an ontology from a server</h3>
-<pre><code class="bash">$ knora-create-onto get [options] output-file
-</code></pre>
-
-<p>The above command line supports the following options:</p>
-<ul>
-<li><em>"-s server" | "--server server"</em>: URL of the Knora server [default: localhost:3333].</li>
-<li><em>"-u username" | "--user username"</em>: Username to log into Knora [default: root@example.com].</li>
-<li><em>"-p password" | "--password password"</em>: Password for login to the Knora server [default: test].</li>
-<li><em>"-P project" | "--project shortcode|shortname|iri"</em>: Shortcode, shortname or iri of project</li>
-<li><em>"-v" | "--verbose"</em>: Print out some information about progress</li>
-</ul>
-<h2 id="json-ontology-definition-format">JSON ontology definition format</h2>
-<h3 id="introduction">Introduction</h3>
+                <h1 id="json-ontology-definition-format">JSON ontology definition format</h1>
+<h2 id="introduction">Introduction</h2>
 <p>This document contains all the information you need to create an ontology that's used by Knora.</p>
 <p>In the first section you find a rough overview of the ontology definition, all the necessary components with a 
 definition and a short example of the definition.</p>
-<h3 id="a-short-overview">A short overview</h3>
+<h2 id="a-short-overview">A short overview</h2>
 <p>In the following section, you find all the mentioned parts with a detailed explanation. Right at the beginning we look 
 at the basic fields that belong to an ontology definition. This serves as an overview for you to which you can return 
 at any time while you read the description.</p>
 <p>A complete ontology definition looks like this:</p>
-<pre><code class="json">{
+<pre><code class="language-json">{
   &quot;prefixes&quot;: {
     &quot;foaf&quot;: &quot;http://xmlns.com/foaf/0.1/&quot;,
     &quot;dcterms&quot;: &quot;http://purl.org/dc/terms/&quot;
@@ -791,11 +659,10 @@ at any time while you read the description.</p>
   }
 }
 </code></pre>
-
 <p>As you can see, only two umbrella terms define our ontology: the "prefixes" object and the "project" object. In the 
 following we take a deeper look into both of them since, as you can see in the example above, 
 both objects have further fine grained definition levels.</p>
-<h4 id="prefixes-object">"Prefixes" object</h4>
+<h3 id="prefixes-object">"Prefixes" object</h3>
 <p>The "prefixes" object contains - as you may already have guessed by the name - the <code>prefixes</code> of <em>external</em> ontologies 
 that are also used in the current project. All prefixes are composed of a keyword, followed by its iri. This is used as 
 a shortcut for later so that you don't always have to specify the full qualified iri but can use the much shorter 
@@ -803,15 +670,14 @@ keyword instead. That means that e.g. instead of addressing a property called "f
 <code>http://xmlns.com/foaf/0.1/familyName</code> you can simply use foaf:familyName. </p>
 <p>As you can see in the example below, you can have more then one prefix too. In the example we have "foaf" as well as 
 "dcterms" as our prefixes.</p>
-<pre><code class="json">{
+<pre><code class="language-json">{
   &quot;prefixes&quot;: {
     &quot;foaf&quot;: &quot;http://xmlns.com/foaf/0.1/&quot;,
     &quot;dcterms&quot;: &quot;http://purl.org/dc/terms/&quot;
   }
 }
 </code></pre>
-
-<h4 id="project-object">"Project" object</h4>
+<h3 id="project-object">"Project" object</h3>
 <p>Right after the "prefix" object the "project" object has to follow, which contains all resources and properties of the 
 ontology. The "project" object is the bread and butter of the ontology. All its important properties are specified therein. </p>
 <p>As you saw in the complete ontology definition in the beginning, the project definitions <code>requires</code> <strong><em>exactly</em></strong> all 
@@ -832,7 +698,7 @@ used, it must be omitted):</p>
 <li>users</li>
 </ul>
 <p>So a simple example definition of the "project" object could look like this:</p>
-<pre><code class="json">&quot;project&quot;: {
+<pre><code class="language-json">&quot;project&quot;: {
    &quot;shortcode&quot;: &quot;0809&quot;,
    &quot;shortname&quot;: &quot;test&quot; ,
    &quot;longname&quot;: &quot;Test Example&quot;,
@@ -844,35 +710,34 @@ used, it must be omitted):</p>
    &quot;lists&quot;: […],
    &quot;groups&quot;: […],
    &quot;users&quot;: […],
-   &quot;ontology&quot;: {…}
+   &quot;ontology&quot;: […]
 }
 </code></pre>
-
-<h3 id="simple-keyvalue-pairs">Simple key/value pairs</h3>
+<h2 id="simple-keyvalue-pairs">Simple key/value pairs</h2>
 <p>At that point we will go through all of this step by step and take a more in depth view on the individual fields of the 
 "project" object. The first four fields of the "project" object are "key"/"value" pairs. Therefore they are quite simple. </p>
-<h4 id="shortcode">Shortcode</h4>
+<h3 id="shortcode">Shortcode</h3>
 <p>It's a hexadecimal string in the range between "0000" and "FFFF" that's used to uniquely identifying the project. The 
 shortcode has to be provided by the DaSCH.</p>
-<h4 id="shortname">Shortname</h4>
+<h3 id="shortname">Shortname</h3>
 <p>This is a short name (string) for the project. It's ment to be like a nickname. If the name of the project is e.g. 
 "Albus Percival Wulfric Dumbledore", then the shortname for it could be "Albi".</p>
-<h4 id="longname">Longname</h4>
+<h3 id="longname">Longname</h3>
 <p>A longer string that provides the full name of the project. In our example, the longname would be "Albus Percival 
 Wulfric Dumbledore".</p>
-<h4 id="descriptions">Descriptions</h4>
+<h3 id="descriptions">Descriptions</h3>
 <p>The descriptions specify the content of the project in <em>exactly</em> one or more strings. These descriptions can be 
 supplied in several languages (currently <em>"en"</em>, <em>"de"</em>, <em>"fr"</em> and <em>"it"</em> are supported). The descriptions have to be 
 given as a JSON object with the language as "key" and the description as "value".  See the example above inside the 
 curly brackets after "descriptions" to see what that means.</p>
-<h3 id="keyobject-pairs">Key/object pairs</h3>
+<h2 id="keyobject-pairs">Key/object pairs</h2>
 <p>The following fields are <strong>not</strong> simple "key"/"value" pairs. They do have a key, the value however is another object 
 and therefore has an internal structure. Due to the increased complexity of these objects, they are looked at in more detail.</p>
-<h4 id="keywords">Keywords</h4>
+<h3 id="keywords">Keywords</h3>
 <p>An array of keywords is used to roughly describe the project in single words. A project that deals e.g. with old 
 monastery manuscripts could possess the keywords "monastery", "manuscripts", "medieval", (...). The array can be empty 
 as well e.i. "keywords": [].</p>
-<h4 id="lists">Lists</h4>
+<h3 id="lists">Lists</h3>
 <!--- Hier sollte eine *gutes" Beispiel aus den GW rein! --->
 
 <p>The list object is used to give the resources of the ontology a taxonomic quality. A taxonomy makes it possible to 
@@ -921,7 +786,7 @@ is optional.</li>
 level and another level), you don't have child nodes. Therefore the nodes element can be omitted in case of a flat taxonomy. </li>
 </ul>
 <p>Here is an example on how to build a taxonomic structure with the help of JSON:</p>
-<pre><code class="json">    &quot;lists&quot;: [
+<pre><code class="language-json">    &quot;lists&quot;: [
       {
         &quot;name&quot;: &quot;dogtaxonomy&quot;,
         &quot;labels&quot;: { &quot;de&quot;: &quot;hunderassen&quot;, &quot;en&quot;: &quot;dogbreeds&quot; },
@@ -953,9 +818,8 @@ level and another level), you don't have child nodes. Therefore the nodes elemen
       }
     ]
 </code></pre>
-
 <p>As already mentioned before, the <em>lists</em> element is optional. If there are no lists, this element has to be omitted.</p>
-<h4 id="groups">Groups</h4>
+<h3 id="groups">Groups</h3>
 <p>This object contains <em>groups</em>-definitions. This is (only) used to specify the permissions a user gets. A project may 
 define user groups such as "project-admins", "students" etc. and give the members of each group individual permissions.</p>
 <p>A <em>group</em>-defintion has the following elements:
@@ -964,7 +828,7 @@ define user groups such as "project-admins", "students" etc. and give the member
 - <em>selfjoin</em>: True, if users are able to join the group; false, if an administrator must add the users.
 - <em>status</em>: Has the value true if the group is active and false if the group is not active.</p>
 <p>Example:</p>
-<pre><code class="json">    &quot;groups&quot;: [
+<pre><code class="language-json">    &quot;groups&quot;: [
       {
         &quot;name&quot;: &quot;biz-editors&quot;,
         &quot;description&quot;: &quot;Editors for the BiZ-project&quot;,
@@ -974,9 +838,8 @@ define user groups such as "project-admins", "students" etc. and give the member
     ],
 
 </code></pre>
-
 <p>The <em>groups</em> element is optional and can therefore be left out.</p>
-<h4 id="users">Users</h4>
+<h3 id="users">Users</h3>
 <p>This object contains <em>user</em>-definitions. You can set user traits here. A user has the following elements:
 - <em>username</em>: The short username for the login. Similar to a nickname. 
 - <em>email</em>: Unique email that identifies the user.
@@ -986,7 +849,7 @@ define user groups such as "project-admins", "students" etc. and give the member
 - <em>lang</em>: The preferred language of the user: "en", "de", "fr", "it" [optional, default: "en"].
 - <em>projects</em>: List of projects the user belongs to.</p>
 <p>Example:</p>
-<pre><code class="json">    &quot;users&quot;: [
+<pre><code class="language-json">    &quot;users&quot;: [
       {
         &quot;username&quot;: &quot;bizedit&quot;,
         &quot;email&quot;: &quot;bizedit@test.org&quot;,
@@ -1000,9 +863,8 @@ define user groups such as "project-admins", "students" etc. and give the member
     ],
 
 </code></pre>
-
 <p>The <em>users</em> element is optional and can therefore be omitted.</p>
-<h4 id="ontology">Ontology</h4>
+<h3 id="ontology">Ontology</h3>
 <p>Most of the definitions for our ontology will be done under the category "ontology": {} inside of the curly brackets. 
 This is the core of the ontology definition. We know, you've already read a whole lot of text so far, but this section 
 is probably the most important one.</p>
@@ -1024,23 +886,22 @@ well as the dependencies inside our ontology. They are: </p>
 <li><em>resources</em></li>
 </ul>
 <p>Example:</p>
-<pre><code class="json">    &quot;ontology&quot;: {
+<pre><code class="language-json">    &quot;ontology&quot;: {
       &quot;name&quot;: &quot;seworon&quot;,
       &quot;label&quot;: &quot;Secrets of the world ontology&quot;,
       &quot;properties&quot;: […],
       &quot;resources&quot;: […]
     }
 </code></pre>
-
 <p>Now lets see what each field does.</p>
-<h4 id="name">Name</h4>
+<h3 id="name">Name</h3>
 <p>First of all, our overall ontology needs a name. After all, we want to create a ontology about a specific subject or set of terms. </p>
 <p>As a "speciality", the <em>name of the ontology</em> has to be a NCNAME conformant name that can be used as prefix. NCNAME 
 means that it has to be a single word without any special characters (like e.g. " . : ! ? # + (...) ") and without any blanks. </p>
-<h4 id="label">Label</h4>
+<h3 id="label">Label</h3>
 <p>Since the "name" of your ontology needs to be in this special format, we like to have a human readable and 
 understandable name of the ontology. This is done in the "label".</p>
-<h4 id="properties">Properties</h4>
+<h3 id="properties">Properties</h3>
 <p>At first, it seems a bit illogical to have to define the properties <em>before</em> the resources. After all, a property 
 always describes the characteristics of a <em>resource</em>. However, it is necessary to define the properties <em>before</em> the 
 resources. The reason for that is that a property - a dependency between resources - can be used in our program not 
@@ -1141,8 +1002,8 @@ which means anytime in between 1925 and the 22nd March 1927.<br />
 <em>gui-elements / gui_attributes</em>:</p>
 <ul>
 <li><code>Geonames</code>: The only GUI element for <em>GeonameValue</em>. Interfaces are with geonames.org and it allows to select a 
-location.
-  <em>gui_attributes</em>: No attributes</li>
+location.<br />
+<em>gui_attributes</em>: No attributes</li>
 </ul>
 </li>
 <li>
@@ -1250,7 +1111,7 @@ the qualified name - including the prefix - has to be given.
   resource class.
   - <code>seqnum</code>: An integer that is used to define a sequence number in an ordered set of instances.</p>
 <p>To sum the <code>Properties</code> section up, here we have an example for a complete properties definition:</p>
-<pre><code class="json">        &quot;properties&quot;: [
+<pre><code class="language-json">        &quot;properties&quot;: [
           {
             &quot;name&quot;: &quot;schulcode&quot;,
             &quot;object&quot;: &quot;TextValue&quot;,
@@ -1278,18 +1139,17 @@ the qualified name - including the prefix - has to be given.
         ]
 
 </code></pre>
-
-<h4 id="resources">Resources</h4>
+<h3 id="resources">Resources</h3>
 <p>The resource classes are the primary entities of the data model. They are the actual objects/terms inside our 
 terminology space. A resource class is a template for the representation of a real object that is represented in the 
 DaSCH database. A resource class defines properties (aka <em>data fields</em>). For each of these properties a data type as 
 well as the cardinality have to defined.</p>
 <p>A resource needs to have the following fields:</p>
-<h4 id="name_1"><em>name</em></h4>
+<h3 id="name_1"><em>name</em></h3>
 <p>A name for the resource.</p>
-<h4 id="label_1"><em>label</em></h4>
+<h3 id="label_1"><em>label</em></h3>
 <p>The string displayed of the resource is being accessed.</p>
-<h4 id="super"><em>super</em></h4>
+<h3 id="super"><em>super</em></h3>
 <p>A resource class is always derived from an other resource. The most generic resource class Knora offers is <em>"Resource"</em>. 
 The following parent predefined resources are provided by Knora:
   - <em>Resource</em>: A generic "thing" that represents an item from the real world
@@ -1306,6 +1166,10 @@ The following parent predefined resources are provided by Knora:
   has the following properties: <em>hasComment</em> (1-n), <em>hasLinkTo</em> (1-n)
   - <em>Region</em>: Represents a simple region. The class has the following properties:
   <em>hasColor</em> (1), <em>isRegionOf</em> (1) <em>hasGeometry</em> (1), <em>isRegionOf</em> (1), <em>hasComment</em> (0-n)</p>
+<h3 id="cardinalities"><em>Cardinalities</em></h3>
+<p>Cardinalities is an array that contains the information about the connections between resources. It tells what type 
+connections a single resource has as well as how many times the connection is established. Thus, the actual "network" is 
+saved in this array</p>
 <ul>
 <li><em>cardinalities</em>: Array of references to the properties that the resource may hold including the
    cardinality. A cardinality has the following properties:</li>
@@ -1323,7 +1187,7 @@ The following parent predefined resources are provided by Knora:
 </li>
 </ul>
 <p>Example for a resource definition:</p>
-<pre><code class="json">&quot;resources&quot;: [
+<pre><code class="language-json">&quot;resources&quot;: [
           {
             &quot;name&quot;: &quot;Schule&quot;,
             &quot;super&quot;: &quot;Resource&quot;,
@@ -1349,8 +1213,7 @@ The following parent predefined resources are provided by Knora:
             ]
           }]
 </code></pre>
-
-<h2 id="fully-fleshed-out-example-ontology">Fully fleshed out example ontology</h2>
+<h1 id="fully-fleshed-out-example-ontology">Fully fleshed out example ontology</h1>
 <p>Finally, we show a complete example of an ontology definition. </p>
 <pre><code>{
     &quot;prefixes&quot;: {
@@ -1554,7 +1417,7 @@ The following parent predefined resources are provided by Knora:
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href=".." title="Introduction" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../dsp-tools/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -1563,19 +1426,19 @@ The following parent predefined resources are provided by Knora:
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Introduction
+                dsp-tools
               </div>
             </div>
           </a>
         
         
-          <a href="../knora_console/" title="knora-console" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../dsp-tools-xmlupload/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Next
                 </span>
-                knora-console
+                Bulk data import
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
@@ -1602,15 +1465,15 @@ The following parent predefined resources are provided by Knora:
       
     </div>
     
-      <script src="../assets/javascripts/vendor.3636a4ec.min.js"></script>
-      <script src="../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../assets/javascripts/bundle.c1ccee15.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: "..",
           features: [],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.5eca75d3.min.js"
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
@@ -11,27 +9,29 @@
       
       
       <link rel="shortcut icon" href="../assets/images/dasch-favicon.ico">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.5.12">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.2">
     
     
       
-        <title>knora-xml-import - Knora-Py Documentation</title>
+        <title>Bulk data import - Knora-Py Documentation</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.4dd2dd8d.min.css">
-      
-        <link rel="stylesheet" href="../assets/stylesheets/palette.6a5ad368.min.css">
-      
+      <link rel="stylesheet" href="../assets/stylesheets/main.19190aaf.min.css">
       
         
+        <link rel="stylesheet" href="../assets/stylesheets/palette.24b84193.min.css">
         
-        <meta name="theme-color" content="">
+          
+          
+          <meta name="theme-color" content="">
+        
       
     
     
     
       
+        
         <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
         <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
@@ -51,16 +51,18 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-blue" data-md-color-accent="deep-blue">
-  
     
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="deep-blue" data-md-color-accent="deep-blue">
+      
+  
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
         
-        <a href="#knora-xml-import" class="md-skip">
+        <a href="#knora-xml-file-format-for-importing-data" class="md-skip">
           Skip to content
         </a>
       
@@ -69,7 +71,9 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
+      
+
+<header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="Header">
     <a href=".." title="Knora-Py Documentation" class="md-header-nav__button md-logo" aria-label="Knora-Py Documentation">
       
@@ -87,7 +91,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              knora-xml-import
+              Bulk data import
             
           </span>
         </div>
@@ -130,8 +134,6 @@
     
     <div class="md-container" data-md-component="container">
       
-        
-      
       
         
       
@@ -142,7 +144,9 @@
               <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Knora-Py Documentation" class="md-nav__button md-logo" aria-label="Knora-Py Documentation">
       
@@ -160,7 +164,7 @@
 
 
   <li class="md-nav__item">
-    <a href=".." title="Introduction" class="md-nav__link">
+    <a href=".." class="md-nav__link">
       Introduction
     </a>
   </li>
@@ -172,8 +176,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../create_onto/" title="knora-create-onto" class="md-nav__link">
-      knora-create-onto
+    <a href="../dsp-tools/" class="md-nav__link">
+      dsp-tools
     </a>
   </li>
 
@@ -184,8 +188,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../knora_console/" title="knora-console" class="md-nav__link">
-      knora-console
+    <a href="../dsp-tools-create/" class="md-nav__link">
+      JSON data model format
     </a>
   </li>
 
@@ -205,12 +209,12 @@
     
     
       <label class="md-nav__link md-nav__link--active" for="__toc">
-        knora-xml-import
+        Bulk data import
         <span class="md-nav__icon md-icon"></span>
       </label>
     
-    <a href="./" title="knora-xml-import" class="md-nav__link md-nav__link--active">
-      knora-xml-import
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Bulk data import
     </a>
     
       
@@ -227,9 +231,342 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage:
+  <a href="#preamble" class="md-nav__link">
+    Preamble
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knora" class="md-nav__link">
+    &lt;knora&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;knora&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permissions" class="md-nav__link">
+    &lt;permissions&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;permissions&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#allow" class="md-nav__link">
+    &lt;allow&gt;
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource" class="md-nav__link">
+    &lt;resource&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;resource&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#image-element" class="md-nav__link">
+    &lt;image&gt;-element
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-prop-element" class="md-nav__link">
+    &lt;text-prop&gt;-element
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;text-prop&gt;-element">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#text-element" class="md-nav__link">
+    &lt;text&gt;-element
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-prop-element" class="md-nav__link">
+    &lt;color-prop&gt;-element
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;color-prop&gt;-element">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#color-element" class="md-nav__link">
+    &lt;color&gt;-element
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date-prop-eleement" class="md-nav__link">
+    &lt;date-prop&gt;-eleement
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;date-prop&gt;-eleement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#date-element" class="md-nav__link">
+    &lt;date&gt;-element
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decimal-prop-element" class="md-nav__link">
+    &lt;decimal-prop&gt;-element
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;decimal-prop&gt;-element">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decimal-element" class="md-nav__link">
+    &lt;decimal&gt;-element
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geometry-prop-element" class="md-nav__link">
+    &lt;geometry-prop&gt;-element
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;geometry-prop&gt;-element">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#geometry-element" class="md-nav__link">
+    &lt;geometry&gt;-element
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geoname-prop-element" class="md-nav__link">
+    &lt;geoname-prop&gt;-element
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;geoname-prop&gt;-element">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#geoname-element" class="md-nav__link">
+    &lt;geoname&gt;-element
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-prop-element" class="md-nav__link">
+    &lt;list-prop&gt;-element
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;list-prop&gt;-element">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-element" class="md-nav__link">
+    &lt;list&gt;-element
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iconclass-prop-element-not-yet-implemented" class="md-nav__link">
+    &lt;iconclass-prop&gt;-element (NOT YET IMPLEMENTED)
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;iconclass-prop&gt;-element (NOT YET IMPLEMENTED)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iconclass-element-not-yet-implemented" class="md-nav__link">
+    &lt;iconclass&gt;-element (NOT YET IMPLEMENTED)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-prop-element" class="md-nav__link">
+    &lt;integer-prop&gt;-element
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;integer-prop&gt;-element">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integer-element" class="md-nav__link">
+    &lt;integer&gt;-element
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interval-prop-element" class="md-nav__link">
+    &lt;interval-prop&gt;-element
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;interval-prop&gt;-element">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interval-element" class="md-nav__link">
+    &lt;interval&gt;-element
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resptr-prop-element" class="md-nav__link">
+    &lt;resptr-prop&gt;-element
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;resptr-prop&gt;-element">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resptr-element" class="md-nav__link">
+    &lt;resptr&gt;-element
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-prop-element" class="md-nav__link">
+    &lt;time-prop&gt;-element
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;time-prop&gt;-element">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#time-element" class="md-nav__link">
+    &lt;time&gt;-element
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uri-prop-element" class="md-nav__link">
+    &lt;uri-prop&gt;-element
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;uri-prop&gt;-element">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uri-element" class="md-nav__link">
+    &lt;uri&gt;-element
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boolean-prop-element" class="md-nav__link">
+    &lt;boolean-prop&gt;-element
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;boolean-prop&gt;-element">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boolean-element" class="md-nav__link">
+    &lt;boolean&gt;-element
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -237,18 +574,6 @@
   
 </nav>
     
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../knoractl/" title="Knoractl" class="md-nav__link">
-      Knoractl
-    </a>
   </li>
 
     
@@ -276,9 +601,342 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#usage" class="md-nav__link">
-    Usage:
+  <a href="#preamble" class="md-nav__link">
+    Preamble
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#knora" class="md-nav__link">
+    &lt;knora&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;knora&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#permissions" class="md-nav__link">
+    &lt;permissions&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;permissions&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#allow" class="md-nav__link">
+    &lt;allow&gt;
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resource" class="md-nav__link">
+    &lt;resource&gt;
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;resource&gt;">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#image-element" class="md-nav__link">
+    &lt;image&gt;-element
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#text-prop-element" class="md-nav__link">
+    &lt;text-prop&gt;-element
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;text-prop&gt;-element">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#text-element" class="md-nav__link">
+    &lt;text&gt;-element
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#color-prop-element" class="md-nav__link">
+    &lt;color-prop&gt;-element
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;color-prop&gt;-element">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#color-element" class="md-nav__link">
+    &lt;color&gt;-element
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#date-prop-eleement" class="md-nav__link">
+    &lt;date-prop&gt;-eleement
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;date-prop&gt;-eleement">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#date-element" class="md-nav__link">
+    &lt;date&gt;-element
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#decimal-prop-element" class="md-nav__link">
+    &lt;decimal-prop&gt;-element
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;decimal-prop&gt;-element">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#decimal-element" class="md-nav__link">
+    &lt;decimal&gt;-element
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geometry-prop-element" class="md-nav__link">
+    &lt;geometry-prop&gt;-element
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;geometry-prop&gt;-element">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#geometry-element" class="md-nav__link">
+    &lt;geometry&gt;-element
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#geoname-prop-element" class="md-nav__link">
+    &lt;geoname-prop&gt;-element
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;geoname-prop&gt;-element">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#geoname-element" class="md-nav__link">
+    &lt;geoname&gt;-element
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-prop-element" class="md-nav__link">
+    &lt;list-prop&gt;-element
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;list-prop&gt;-element">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#list-element" class="md-nav__link">
+    &lt;list&gt;-element
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iconclass-prop-element-not-yet-implemented" class="md-nav__link">
+    &lt;iconclass-prop&gt;-element (NOT YET IMPLEMENTED)
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;iconclass-prop&gt;-element (NOT YET IMPLEMENTED)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#iconclass-element-not-yet-implemented" class="md-nav__link">
+    &lt;iconclass&gt;-element (NOT YET IMPLEMENTED)
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integer-prop-element" class="md-nav__link">
+    &lt;integer-prop&gt;-element
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;integer-prop&gt;-element">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integer-element" class="md-nav__link">
+    &lt;integer&gt;-element
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#interval-prop-element" class="md-nav__link">
+    &lt;interval-prop&gt;-element
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;interval-prop&gt;-element">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#interval-element" class="md-nav__link">
+    &lt;interval&gt;-element
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#resptr-prop-element" class="md-nav__link">
+    &lt;resptr-prop&gt;-element
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;resptr-prop&gt;-element">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#resptr-element" class="md-nav__link">
+    &lt;resptr&gt;-element
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#time-prop-element" class="md-nav__link">
+    &lt;time-prop&gt;-element
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;time-prop&gt;-element">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#time-element" class="md-nav__link">
+    &lt;time&gt;-element
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#uri-prop-element" class="md-nav__link">
+    &lt;uri-prop&gt;-element
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;uri-prop&gt;-element">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#uri-element" class="md-nav__link">
+    &lt;uri&gt;-element
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#boolean-prop-element" class="md-nav__link">
+    &lt;boolean-prop&gt;-element
+  </a>
+  
+    <nav class="md-nav" aria-label="&lt;boolean-prop&gt;-element">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#boolean-element" class="md-nav__link">
+    &lt;boolean&gt;-element
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -295,55 +953,26 @@
               
                 
                 
-                  
-                
-                
                 <p><a href="https://badge.fury.io/py/knora"><img alt="PyPI version" src="https://badge.fury.io/py/knora.svg" /></a></p>
-<h1 id="knora-xml-import">knora-xml-import</h1>
-<p>Use <code>knora-xml-import</code> for importing data from an XML-file into knora.</p>
-<h2 id="usage">Usage:</h2>
-<pre><code class="bash">$ knora-xml-import project-shortname
-</code></pre>
-
-<p>It supports the following options:</p>
-<ul>
-<li><em>"-s server" | "--server server"</em>: The URl of the Knora server [default: http://0.0.0.0:3333]</li>
-<li><em>"-S sipi-server" | "--sipi sipi-server"</em>: The URL of the SIPI IIIF server [default: http://0.0.0.0:1024]</li>
-<li><em>"-u username" | "--user username"</em>: Username to log into Knora [default: root@example.com]</li>
-<li><em>"-p password" | "--password password"</em>: The password for login to the Knora server [default: test]</li>
-<li><em>"-F folder" | "--folder folder"</em>: Folder containing the XML-file with the data and the images [default: <code>project-short-name</code>.dir]</li>
-<li><em>"-i input_file" | "--infile input_file"</em>: Input data file (XML).</li>
-<li><em>"-a assets_dir" | "--assets asset_dir"</em>: Path to assets folder.</li>
-<li><em>"-I images_dir" | "--images images_dir"</em>: Path to images folder</li>
-<li><em>"-v" | "--validate"</em>: Do only validation of input file</li>
-</ul>
-<p>It is mandatory to give the project shortname, username and password to connect to the Knora backend. If no other options are given,
-knora-ml-import assumes that there is a folder with the name "<code>project-shortname</code>.dir" which contains</p>
-<ul>
-<li>the XML file that has the same name as the project with the extension <code>.xml</code></li>
-<li>an optional directory called <code>assets</code> that contains icons etc.</li>
-<li>a directory called <code>images</code> containing the images for StillImageResources</li>
-<li>may contain the project ontology definition as JSON file</li>
-</ul>
-<p>However, the XML-import file, assets folder and the images folder may begiven on the command line.</p>
 <h1 id="knora-xml-file-format-for-importing-data">Knora XML-file format for importing data</h1>
 <p>The import file is a standard XML file as decribed below.</p>
 <h2 id="preamble">Preamble</h2>
 <p>The import file must start with the standard XML header:</p>
-<pre><code class="xml">&lt;?xml version='1.0' encoding='utf-8'?&gt;
+<pre><code class="language-xml">&lt;?xml version='1.0' encoding='utf-8'?&gt;
 </code></pre>
-
-<h2 id="knora-element"><code>&lt;knora&gt;</code>-element</h2>
+<h2 id="knora">&lt;knora&gt;</h2>
 <p>The <code>&lt;knora&gt;</code>-element describes a set of resources that are to be imported. It is the
 container for an arbitrary number of <code>resource</code> elements and may only
 contain resource tags.
-The <code>&lt;knora&gt;</code>-eelement defines has the following options:
-- <em>xmlns:xsi</em>: <code>"http://www.w3.org/2001/XMLSchema-instance"</code> [required]
-- <em>xsi:schemaLocation</em>: Path to knora XML schema file for validation [optional]
-- <em>shortcode</em>: Knora project shortcode, e.g. "0801" [required]
-- <em>ontology</em>: Name of the ontology [required]
-Thus, the <code>&lt;knora&gt;</code>-eelment may b used as follows:</p>
-<pre><code class="xml">&lt;knora
+The <code>&lt;knora&gt;</code>-eelement defines has the following options:</p>
+<ul>
+<li><em>xmlns:xsi</em>: <code>"http://www.w3.org/2001/XMLSchema-instance"</code> [required]</li>
+<li><em>xsi:schemaLocation</em>: Path to knora XML schema file for validation [optional]</li>
+<li><em>shortcode</em>: Knora project shortcode, e.g. "0801" [required]</li>
+<li><em>ontology</em>: Name of the ontology [required]</li>
+</ul>
+<p>Thus, the <code>&lt;knora&gt;</code>-eelment may b used as follows:</p>
+<pre><code class="language-xml">&lt;knora
  xmlns:xsi=&quot;http://www.w3.org/2001/XMLSchema-instance&quot;
  xsi:schemaLocation=&quot;../knora-data-schema.xsd&quot;
  shortcode=&quot;0806&quot;
@@ -351,31 +980,56 @@ Thus, the <code>&lt;knora&gt;</code>-eelment may b used as follows:</p>
 …
 &lt;/knora&gt;
 </code></pre>
-
 <p>The <code>&lt;knora&gt;</code>-element can only contain
 - <code>&lt;permissions&gt;</code>-elements
 - <code>&lt;resource&gt;</code>-elements</p>
 <p>The permissions are implemented for importing data using permission sets. A permission set is
 a named element that contains the permissions for selected resources or values.
 In order to give a resource a value the permission, the named permission set is referenced.</p>
-<h3 id="permissions-element"><code>&lt;permissions&gt;</code>-element</h3>
-<p>A <code>&lt;permissions&gt;</code>-element contains the permissions given to the selected groups. It contains a mandatory
-options <code>id</code> and must contain at least one <code>&lt;allow&gt;</code>-element per user group indicatng the group's permission. It has the form:</p>
-<pre><code class="xml">    &lt;permissions id=&quot;res-default&quot;&gt;
+<h3 id="permissions">&lt;permissions&gt;</h3>
+<p>The DSP-server provides for each resource and each field of a resource access control. For a more thorough discussion
+of the permission and access system of the DSP platform, see
+<a href="https://docs.knora.org/02-knora-ontologies/knora-base/#permissions">DSP platform permissions</a>
+The following access rights are defined by the DSP platform which apply to either the resource or field:</p>
+<ul>
+<li><code>RV</code>: <em>Restricted View permission</em>: The user sees a somehow restricted view of the element. E.g. in case of a still image
+  resource, the image is displeyed at reduced resolution or with a watermark overlay.</li>
+<li><code>V</code>: <em>View permission</em>: The user has read access to the element</li>
+<li><code>M</code>: <em>Modifiy permission</em>: The user may alter/modify the element, but may not delete it</li>
+<li><code>D</code>: <em>Delete permission</em>: The user is allowed to delete the element</li>
+<li><code>CR</code>: <em>Change Right permission</em>: The user may change the permission of the element</li>
+</ul>
+<p>The user does not hold directly the permissions, but may belong to an arbitrary number of groups which hold the
+permissions. By default, the following groups always exist, and each user belongs to at least one of them</p>
+<ul>
+<li><code>UnkownUser</code>: The user is not known to the DSP platform (no login)</li>
+<li><code>KnownUser</code>: The user is known (performed login), but is not member of the project the element belongs to</li>
+<li><code>ProjectMember</code>: The user belongs to the same project as the data element retrieved</li>
+<li><code>ProjectAdmin</code>: The user is project administrator in the project the data element belongs to</li>
+<li><code>Creator</code>: The user is the "owner" of the element, that is the one that created the element</li>
+<li><code>SystemAdmin</code>: System administrator</li>
+</ul>
+<p>In addition, more groups with arbitrary names can be created by the project admins. For referencing such a group,
+the projectname has to be prepended before the group name separated by a colon, e.g. <code>knora-py-test:MlsEditors</code>.</p>
+<p>A <code>&lt;permissions&gt;</code>-element contains the permissions given to the selected groups and is called a <em>permission set</em>. It
+contains a mandatory option <code>id</code> and must contain at least one <code>&lt;allow&gt;</code>-element per user group indicating the group's 
+permission. It has the form:</p>
+<pre><code class="language-xml">     &lt;permissions id=&quot;res-default&quot;&gt;
         &lt;allow group=&quot;UnknownUser&quot;&gt;RV&lt;/allow&gt;
-        ...
+        &lt;allow group=&quot;KnownUser&quot;&gt;V&lt;/allow&gt;
+        &lt;allow group=&quot;Creator&quot;&gt;CR&lt;/allow&gt;
+        &lt;allow group=&quot;ProjectAdmin&quot;&gt;CR&lt;/allow&gt;
+        &lt;allow group=&quot;knora-py-test:MlsEditors&quot;&gt;D&lt;/allow&gt;
     &lt;/permissions&gt;
 </code></pre>
-
-<p>Options:
-- <em>id</em>: Unique id (an xs:ID) for the permission set</p>
-<p>Subelements allowed:
-- <code>&lt;allow&gt;</code></p>
-<h4 id="allow-element"><code>&lt;allow&gt;</code>-element</h4>
+<p><em>Options</em>:
+- <em>id</em>: Unique id (an xs:ID) for the permission set. It is used to reference a permission set.</p>
+<p><em>Subelements allowed</em>:
+- <code>&lt;allow&gt;</code>: defines the permission for one group</p>
+<h4 id="allow">&lt;allow&gt;</h4>
 <p>The <code>&lt;allow&gt;</code>-element is used to defined the permission for one group. It has the form:</p>
-<pre><code class="xml">    &lt;allow group=&quot;ProjectAdmin&quot;&gt;CR&lt;/allow&gt;&gt;
+<pre><code class="language-xml">    &lt;allow group=&quot;ProjectAdmin&quot;&gt;CR&lt;/allow&gt;&gt;
 </code></pre>
-
 <p>The allowed values are
 (see <a href="https://docs.knora.org/paradox/02-knora-ontologies/knora-base.html#permissions">Knora-documentation</a>
 for a more detailed description of the Knora permission system):</p>
@@ -386,11 +1040,11 @@ for a more detailed description of the Knora permission system):</p>
 <li><em>"D"</em>: Delete: The user is able to mark a resource of a value as deleted.</li>
 <li><em>"CR"</em>: The user is able to change the right of a resource or value</li>
 </ul>
-<p>The <code>group</code> option is mandatory:
-Options:</p>
+<p>The <code>group</code> option is mandatory.</p>
+<p><em>Options</em>:</p>
 <ul>
 <li><em>group</em>: Defines the group for the permission. The knora systemgroups as well as project speccific groups are supported.
-           A project specific group name has the form <code>project-shortname:groupnam</code>. The system groups are:</li>
+           A project specific group name has the form <code>project-shortname:groupnam</code>. The system groups are:<ul>
 <li>"UnknownUser"</li>
 <li>"KnownUser"</li>
 <li>"ProjectMember"</li>
@@ -398,16 +1052,21 @@ Options:</p>
 <li>"ProjectAdmin"</li>
 <li>"SystemAdmin"</li>
 </ul>
-<h3 id="resource-element"><code>&lt;resource&gt;</code>-element</h3>
+</li>
+</ul>
+<p><em>Subelements allowed</em>: None</p>
+<h3 id="resource"><code>&lt;resource&gt;</code></h3>
 <p>A <code>resource</code>-element contains all necessary information to create a resource. It
-has th following options:</p>
+has the following options:</p>
+<p><em>Options</em>:</p>
 <ul>
 <li><em>label</em>: The label, a human readable, semantical meaningfull short name of the resource [required]</li>
 <li><em>restype</em>: The resource type as defined within the ontology [required]</li>
-<li><em>unique_id</em>: A unique, arbitrary string giving a unique ID to the resource. This ID is only used during the
+<li><em>id</em>: A unique, arbitrary string giving a unique ID to the resource. This ID is only used during the
   import process for referencing this resource from other resources. During the import process, it will be replaced by
-  the IRI used internally by Knora.</li>
-<li><em>permissions</em>: a reference to a permission set. These permissions will be applied to the newly created resoource.</li>
+  the IRI used internally by Knora. [required]</li>
+<li><em>permissions</em>: a reference to a permission set. These permissions will be applied to the newly created resoource.
+  [optional]</li>
 </ul>
 <pre><code>&lt;resource label=&quot;EURUS015a&quot;
           restype=&quot;Postcard&quot;
@@ -416,7 +1075,6 @@ has th following options:</p>
 …
 &lt;/resource&gt;
 </code></pre>
-
 <p>The <code>&lt;resource&gt;</code>-element contains for each property class a <code>property</code>-element which itself
 contains one or several <code>value</code>-elements. It <em>must</em> also contain an <code>&lt;image&gt;</code>-element if the
 resource is a StillImage. The <code>property</code>-element must have the option <code>name</code> present which
@@ -426,9 +1084,8 @@ indicates the property class from the project specific ontology where the values
 <li><em>"name"</em>: Name of the property as given in the ontology</li>
 </ul>
 <p>Example:</p>
-<pre><code class="xml">&lt;text-prop name=&quot;hasTranslation&quot;&gt;
+<pre><code class="language-xml">&lt;text-prop name=&quot;hasTranslation&quot;&gt;
 </code></pre>
-
 <p>The <code>&lt;resource&gt;</code>-element may contain the following tags describing properties (data fields):</p>
 <ul>
 <li><em><code>&lt;image&gt;</code></em>: In case of the StillImageResource contains the path to the image file.</li>
@@ -455,9 +1112,8 @@ resource is a <code>StillImageResource</code>!</p>
 - none</p>
 <p><em>Note</em>: There is only <em>one</em> <code>&lt;image&gt;</code>-element allowed per StillImageResource!</p>
 <p>Example:</p>
-<pre><code class="xml">&lt;image&gt;postcards.dir/images/EURUS015a.jpg&lt;/image&gt;
+<pre><code class="language-xml">&lt;image&gt;postcards.dir/images/EURUS015a.jpg&lt;/image&gt;
 </code></pre>
-
 <h4 id="text-prop-element"><code>&lt;text-prop&gt;</code>-element</h4>
 <p>The text property element is used to list text values.</p>
 <p>The <code>&lt;text-prop&gt;</code>-element must contain at least one <code>&lt;text&gt;</code>-element. There are several variants of text tags:</p>
@@ -476,9 +1132,8 @@ resource is a <code>StillImageResource</code>!</p>
 customized standoff tags is not yet implemented!)</p>
 <p>E.g. a text containing a link to another resource must have the following form before being
 encoded as hex64-string:</p>
-<pre><code class="xml">'&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;Brief: &lt;a class=&quot;salsah-link&quot; href=&quot;IRI:6618:IRI&quot;&gt;&lt;p&gt;Webern an Willheim, 10.10.1928&lt;/p&gt;&lt;/a&gt;'
+<pre><code class="language-xml">'&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;Brief: &lt;a class=&quot;salsah-link&quot; href=&quot;IRI:6618:IRI&quot;&gt;&lt;p&gt;Webern an Willheim, 10.10.1928&lt;/p&gt;&lt;/a&gt;'
 </code></pre>
-
 <p>Please note that the href-option withiin the anchor tag points to an internal resource of knora
 and this has to have the special format "<code>IRI:</code>res-id<code>:IRI</code>" where res-id is the resource
 id defined within the XML import file. A resource already existing in knora can be referenced by
@@ -486,18 +1141,16 @@ indicating its IRI directly has <em>href</em>-option.</p>
 <p>In case the string references one or more internal resources, the option <code>resrefs</code><em>must</em> be using to
 indicate there ID's! The ID's are separated by a "|"-character</p>
 <p>A complete example for a simple text:</p>
-<pre><code class="xml">&lt;text-prop name=&quot;hasComment&quot;&gt;
+<pre><code class="language-xml">&lt;text-prop name=&quot;hasComment&quot;&gt;
    &lt;text encoding=&quot;utf8&quot;&gt;Probe bei &quot;Wimberger&quot;. Lokal in Wien?&lt;/text&gt;
 &lt;/text-prop&gt;
 </code></pre>
-
 <p>A complete example of a complex text which encodes the text <code>&lt;a class="salsah-link" href="IRI:6618:IRI"&gt;&lt;p&gt;Webern an Willheim, 10.10.1928&lt;/p&gt;&lt;/a&gt;&lt;p&gt;&lt;/p&gt;</code> containing
 a link to the internal resource with the ID="6618":</p>
-<pre><code class="xml">&lt;text-prop name=&quot;hasComment&quot;&gt;
+<pre><code class="language-xml">&lt;text-prop name=&quot;hasComment&quot;&gt;
       &lt;text resrefs=&quot;6618&quot; encoding=&quot;hex64&quot;&gt;PGEgY2xhc3M9InNhbHNhaC1saW5rIiBocmVmPSJJUkk6NjYxODpJUkkiPjxwPldlYmVybiBhbiBXaWxsaGVpbSwgMTAuMTAuMTkyODwvcD48L2E+PHA+PC9wPg==&lt;/text&gt;
 &lt;/text-prop&gt;
 </code></pre>
-
 <p>Within one text property, simple and complex text values may be mixed.</p>
 <h4 id="color-prop-element"><code>&lt;color-prop&gt;</code>-element</h4>
 <p>The color-prop eelement is used to define a color property.</p>
@@ -510,12 +1163,11 @@ web-notation, that is a "#" followed by 3 or 6 hex numerals.</p>
 - <em>permissions</em>: ID or a permission set. Optional, but if omitted very restricted default permissions apply!
 - <em>comment</em>: A comment to this specific value.</p>
 <p>A propery with 2 color valus would be defined as follows:</p>
-<pre><code class="xml">&lt;color-prop name=&quot;hasColor&quot;&gt;
+<pre><code class="language-xml">&lt;color-prop name=&quot;hasColor&quot;&gt;
     &lt;color&gt;#00ff66&lt;/color&gt;
     &lt;color&gt;#ff00ff&lt;/color&gt;
 &lt;/color-prop&gt;
 </code></pre>
-
 <h4 id="date-prop-eleement"><code>&lt;date-prop&gt;</code>-eleement</h4>
 <p>Is used to define knora dates.</p>
 <p><em>Options</em>:
@@ -524,7 +1176,6 @@ web-notation, that is a "#" followed by 3 or 6 hex numerals.</p>
 <p>A Knora date value. It has the following format:</p>
 <pre><code>calendar:epoch:yyyy-mm-dd:epoch:yyyy-mm-dd
 </code></pre>
-
 <ul>
 <li><em>calendar</em>: either "JULIAN" or "GREGORIAN" [optional, default: GREGORIAN]</li>
 <li><em>epoch</em>: either "BCE" or "CE" [optional, default CE]</li>
@@ -541,7 +1192,6 @@ then the precision it <em>month</em>, if also the month is omited, the procision
 <pre><code>&lt;date&gt;GREGORIAN:CE:2014-01-31&lt;/date&gt;
 &lt;date&gt;GREGORIAN:CE:1930-09-02:CE:1930-09-03&lt;/date&gt;
 </code></pre>
-
 <h4 id="decimal-prop-element"><code>&lt;decimal-prop&gt;</code>-element</h4>
 <p>Properties with decimal values. Contains one or more <code>&lt;dcimal&gt;</code>-tags.</p>
 <p><em>Options</em>:
@@ -554,7 +1204,6 @@ then the precision it <em>month</em>, if also the month is omited, the procision
 <p>Example:</p>
 <pre><code>&lt;float&gt;3.14159&lt;/float&gt;
 </code></pre>
-
 <h4 id="geometry-prop-element"><code>&lt;geometry-prop&gt;</code>-element</h4>
 <p>Properties which contain a geometric definition for a 2-D region (e.g. on an image). Usually thes
 are not created by an import and should be used with caution!</p>
@@ -584,11 +1233,9 @@ The following example defines a poylgon:</p>
    &quot;original_index&quot;: 0
 }
 </code></pre>
-
 <p>Thus, a <geometry>-element may look like:</p>
 <pre><code>&lt;geometry&gt;{&quot;status&quot;:&quot;active&quot;,&quot;type&quot;=&quot;circle&quot;,&quot;lineColor&quot;=&quot;#ff0000&quot;,&quot;lineWidth&quot;=2,&quot;points&quot;:[{&quot;x&quot;:0.5,&quot;y&quot;:0.5}],&quot;radius&quot;:{&quot;x&quot;:0.1,&quot;y&quot;:0.0}}&lt;/geometry&gt;
 </code></pre>
-
 <p><em>Options</em>:
 - <em>permissions</em>: ID or a permission set. Optional, but if omitted very restricted default permissions apply!
 - <em>comment</em>: A comment to this specific value.</p>
@@ -604,7 +1251,6 @@ The following example defines a poylgon:</p>
 <p>Example (City of Wien):</p>
 <pre><code>&lt;geoname&gt;2761369&lt;/geoname&gt;
 </code></pre>
-
 <h4 id="list-prop-element"><code>&lt;list-prop&gt;</code>-element</h4>
 <p>Entry into a list (list node). List nodes are identified by their <code>name</code>-property that was given when creating the list nodes (which must be unique within each list!).</p>
 <p><em>Options</em>:
@@ -617,7 +1263,6 @@ The following example defines a poylgon:</p>
 <p>Example:</p>
 <pre><code>&lt;list&gt;H_4128&lt;/list&gt;
 </code></pre>
-
 <h4 id="iconclass-prop-element-not-yet-implemented"><code>&lt;iconclass-prop&gt;</code>-element (<em>NOT YET IMPLEMENTED</em>)</h4>
 <p>Contains the short code of an iconclass entry see <a href="http://iconclass.org">iconclass.org</a>.
 For example the code
@@ -633,7 +1278,6 @@ Aurora · Ripa · air · ancient history · child · classical antiquity · godd
 <p>Usage:</p>
 <pre><code>&lt;iconclass&gt;92E112&lt;/iconclass&gt;
 </code></pre>
-
 <h4 id="integer-prop-element"><code>&lt;integer-prop&gt;</code>-element</h4>
 <p>Contains integer values</p>
 <p><em>Options</em>:
@@ -645,7 +1289,6 @@ Aurora · Ripa · air · ancient history · child · classical antiquity · godd
 <p>Usage:</p>
 <pre><code>&lt;integer&gt;4711&lt;/integer&gt;
 </code></pre>
-
 <h4 id="interval-prop-element"><code>&lt;interval-prop&gt;</code>-element</h4>
 <p>An interval defined a time period with a start and an end</p>
 <p><em>Options</em>:
@@ -658,7 +1301,6 @@ Aurora · Ripa · air · ancient history · child · classical antiquity · godd
 <p>Example:</p>
 <pre><code>&lt;interval&gt;1.5:3.12&lt;/interval&gt;
 </code></pre>
-
 <h4 id="resptr-prop-element"><code>&lt;resptr-prop&gt;</code>-element</h4>
 <p>A link to another resource within Knora</p>
 <p><em>Options</em>:
@@ -674,11 +1316,9 @@ Aurora · Ripa · air · ancient history · child · classical antiquity · godd
 …
 &lt;/resource
 </code></pre>
-
 <p>it can be referenced as</p>
 <pre><code>&lt;resptr&gt;238807&lt;/resptr&gt;
 </code></pre>
-
 <h4 id="time-prop-element"><code>&lt;time-prop&gt;</code>-element</h4>
 <p>A time property</p>
 <p><em>Options</em>:
@@ -717,7 +1357,6 @@ The value cannot be 0000.</li>
 <pre><code>&lt;time&gt;2009-10-10T12:00:00-05:00&lt;/time&gt;
 &lt;time&gt;2019-10-23T13.45:12Z&lt;/time&gt;
 </code></pre>
-
 <h4 id="uri-prop-element"><code>&lt;uri-prop&gt;</code>-element</h4>
 <p>A property containing an valid URI</p>
 <p><em>Options</em>:
@@ -730,7 +1369,6 @@ The value cannot be 0000.</li>
 <p>Example:</p>
 <pre><code>&lt;uri&gt;http://www.groove-t-gang.ch&lt;/ur&gt;
 </code></pre>
-
 <h4 id="boolean-prop-element"><code>&lt;boolean-prop</code>&gt;-element</h4>
 <p>A property containing boolean values</p>
 <p><em>Options</em>:
@@ -762,7 +1400,7 @@ The value cannot be 0000.</li>
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
         
-          <a href="../knora_console/" title="knora-console" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../dsp-tools-create/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
             </div>
@@ -771,25 +1409,11 @@ The value cannot be 0000.</li>
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                knora-console
+                JSON data model format
               </div>
             </div>
           </a>
         
-        
-          <a href="../knoractl/" title="Knoractl" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
-                Knoractl
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-            </div>
-          </a>
         
       </nav>
     </div>
@@ -810,15 +1434,15 @@ The value cannot be 0000.</li>
       
     </div>
     
-      <script src="../assets/javascripts/vendor.3636a4ec.min.js"></script>
-      <script src="../assets/javascripts/bundle.e9fe3281.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents"}</script>
+      <script src="../assets/javascripts/vendor.7e0ee788.min.js"></script>
+      <script src="../assets/javascripts/bundle.c1ccee15.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
       
       <script>
         app = initialize({
           base: "..",
           features: [],
           search: Object.assign({
-            worker: "../assets/javascripts/worker/search.5eca75d3.min.js"
+            worker: "../assets/javascripts/worker/search.4ac00218.min.js"
           }, typeof search !== "undefined" && search)
         })
       </script>

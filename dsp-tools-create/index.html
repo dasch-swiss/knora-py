@@ -472,7 +472,7 @@
         
           <li class="md-nav__item">
   <a href="#super" class="md-nav__link">
-    super
+    Super
   </a>
   
 </li>
@@ -829,7 +829,7 @@
         
           <li class="md-nav__item">
   <a href="#super" class="md-nav__link">
-    super
+    Super
   </a>
   
 </li>
@@ -1602,7 +1602,7 @@ a resource or property from another one is not part of this documentation).</p>
 </code></pre>
 <p>Like already mentioned before: The following two fields are optional (can be omitted), with the notable exception
 of the "super" clause in case of LinkValues where the super clause is mandatory:</p>
-<h5 id="super">super</h5>
+<h5 id="super">Super</h5>
 <p><code>"super": ["&lt;super-property&gt;", "&lt;super-property&gt;, ...]</code>  </p>
 <p>A property <strong><em>must</em></strong> be derived from at least one base property. The most generic base property that the DSP offers is 
 <em>hasValue</em>. In addition the property may be a subproperty of properties defined in external or other ontologies.
@@ -1670,28 +1670,34 @@ A name for the resource.</p>
 <p><code>"super": ["&lt;super-resource&gt;", "&lt;super-resource&gt;", ...]</code>  </p>
 <p>A resource  is always derived from at least one other resource. The most generic resource class DSP offers
 is <em>"Resource"</em>. A resource may additionally also be derived from resources defined in external ontologies.
-The following parent predefined resources are provided by Knora:
-  - <code>Resource</code> A generic "thing" that represents an item from the real world
-  - <code>StillImageRepresentation</code>: An object that is connected to a still image
-  - <code>TextRepresentation</code>: An object that is connected to an (external) text (Not Yet Implemented)
-  - <code>AudioRepresentation</code>: An object representing audio data (Not Yet Implemented)
-  - <code>DDDRepresentation</code>: An object representing a 3-D representation (Not Yet Implemented)
-  - <code>DocumentRepresentation</code>: An object representing an opaque document (e.g. a PDF)
-  - <code>MovingImageRepresentation</code>: An object representing a moving image (video, film)
-  - <code>Annotation</code>: A predefined annotation object. It has automaticalle the following predefined properties
-    defined:
-    - <code>hasComment</code> (1-n)
-    - <code>isAnnotationOf</code> (1)
-  - <code>LinkObj</code>: A resource class linking together several other, generic, resource classes. The class
-  has the following properties:
-  - <code>hasComment</code> (1-n)
-  - <code>hasLinkTo</code> (1-n)
-  - <code>Region</code>: Represents a simple region. The class has the following properties:
-     - <code>hasColor</code> (1)
-     - <code>isRegionOf</code> (1)
-     - <code>hasGeometry</code> (1)
-     - <code>isRegionOf</code> (1)
-     - <code>hasComment</code> (0-n)</p>
+The following parent predefined resources are provided by Knora:  </p>
+<ul>
+<li><code>Resource</code> A generic "thing" that represents an item from the real world</li>
+<li><code>StillImageRepresentation</code>: An object that is connected to a still image</li>
+<li><code>TextRepresentation</code>: An object that is connected to an (external) text (Not Yet Implemented)</li>
+<li><code>AudioRepresentation</code>: An object representing audio data (Not Yet Implemented)</li>
+<li><code>DDDRepresentation</code>: An object representing a 3-D representation (Not Yet Implemented)</li>
+<li><code>DocumentRepresentation</code>: An object representing an opaque document (e.g. a PDF)</li>
+<li><code>MovingImageRepresentation</code>: An object representing a moving image (video, film)</li>
+<li><code>Annotation</code>: A predefined annotation object. It has automaticalle the following predefined properties
+    defined:<ul>
+<li><code>hasComment</code> (1-n)</li>
+<li><code>isAnnotationOf</code> (1)</li>
+</ul>
+</li>
+<li><code>LinkObj</code>: A resource class linking together several other, generic, resource classes. The class
+  has the following properties:</li>
+<li><code>hasComment</code> (1-n)</li>
+<li><code>hasLinkTo</code> (1-n)</li>
+<li><code>Region</code>: Represents a simple region. The class has the following properties:<ul>
+<li><code>hasColor</code> (1)</li>
+<li><code>isRegionOf</code> (1)</li>
+<li><code>hasGeometry</code> (1)</li>
+<li><code>isRegionOf</code> (1)</li>
+<li><code>hasComment</code> (0-n)</li>
+</ul>
+</li>
+</ul>
 <h5 id="cardinalities">Cardinalities</h5>
 <p><code>"cardinalities": [...]</code>  </p>
 <p><a name="cardinalities"></a>
@@ -1700,13 +1706,13 @@ connections a single resource has as well as how many times the connection is es
 saved in this array</p>
 <ul>
 <li><code>cardinalities</code>: Array of references to the properties that the resource may hold including the
-   cardinality. A cardinality has the following properties:</li>
+  cardinality. A cardinality has the following properties:</li>
 <li><code>propname</code>: The name of the property. If it's used in the form ":"propname, the current ontology is referenced. If 
-     the ":" is omitted, a DSP standard ontology is referenced, otherwise the full prefix of the ontology has to be used.</li>
+    the ":" is omitted, a DSP standard ontology is referenced, otherwise the full prefix of the ontology has to be used.</li>
 <li><code>gui_order</code>: An integer number which will help the GUI to display the properties in the desired
-     order</li>
+    order</li>
 <li><code>cardinality</code>: Indicates how often a given property may occur. The possible values
-     are:<ul>
+    are:  <ul>
 <li><code>"1"</code>: Exactly once (mandatory one value and only one)</li>
 <li><code>"0-1"</code>: The value may be omitted, but can occur only once</li>
 <li><code>"1-n"</code>: At least one value must be present. But multiple values may be present</li>

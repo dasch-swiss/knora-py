@@ -281,6 +281,27 @@
 </li>
         
           <li class="md-nav__item">
+  <a href="#sound-element" class="md-nav__link">
+    &lt;sound&gt;-element
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#movie-element" class="md-nav__link">
+    &lt;movie&gt;-element
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#document-element" class="md-nav__link">
+    &lt;document&gt;-element
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#text-prop-element" class="md-nav__link">
     &lt;text-prop&gt;-element
   </a>
@@ -673,6 +694,27 @@
           <li class="md-nav__item">
   <a href="#image-element" class="md-nav__link">
     &lt;image&gt;-element
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sound-element" class="md-nav__link">
+    &lt;sound&gt;-element
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#movie-element" class="md-nav__link">
+    &lt;movie&gt;-element
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#document-element" class="md-nav__link">
+    &lt;document&gt;-element
   </a>
   
 </li>
@@ -1187,12 +1229,39 @@ indicates the property class from the project specific ontology where the values
 </ul>
 <h4 id="image-element"><code>&lt;image&gt;</code>-element</h4>
 <p>The <code>&lt;image&gt;</code>-element contains the path to an image file. It must only be used if the
-resource is a <code>StillImageResource</code>!</p>
+resource is a <code>StillImageRepresentation</code> and must be the first element!</p>
 <p><em>Options</em>:
 - none</p>
-<p><em>Note</em>: There is only <em>one</em> <code>&lt;image&gt;</code>-element allowed per StillImageResource!</p>
+<p><em>Note</em>: There is only <em>one</em> <code>&lt;image&gt;</code>-element allowed per StillImageRepresentation!</p>
 <p>Example:</p>
 <pre><code class="language-xml">&lt;image&gt;postcards.dir/images/EURUS015a.jpg&lt;/image&gt;
+</code></pre>
+<h4 id="sound-element"><code>&lt;sound&gt;</code>-element</h4>
+<p>The <code>&lt;sound&gt;</code>-element contains the path to an sound file. It must only be used if the
+resource is a <code>AudioRepresentation</code> and must be the first element!</p>
+<p><em>Options</em>:
+- none</p>
+<p><em>Note</em>: There is only <em>one</em> <code>&lt;sound&gt;</code>-element allowed per AudioRepresentation!</p>
+<p>Example:</p>
+<pre><code class="language-xml">&lt;sound&gt;concerts.dir/files/SOTW.wav&lt;/sound&gt;
+</code></pre>
+<h4 id="movie-element"><code>&lt;movie&gt;</code>-element</h4>
+<p>The <code>&lt;movie&gt;</code>-element contains the path to an movie file. It must only be used if the
+resource is a <code>MovingImageRepresentation</code> and must be the first element!</p>
+<p><em>Options</em>:
+- none</p>
+<p><em>Note</em>: There is only <em>one</em> <code>&lt;movie&gt;</code>-element allowed per MovingImageRepresentation!</p>
+<p>Example:</p>
+<pre><code class="language-xml">&lt;movie&gt;movies.dir/files/the_general.mp4&lt;/movie&gt;
+</code></pre>
+<h4 id="document-element"><code>&lt;document&gt;</code>-element</h4>
+<p>The <code>&lt;document&gt;</code>-element contains the path to an document file. It must only be used if the
+resource is a <code>DocumentRepresentation</code> and must be the first element!</p>
+<p><em>Options</em>:
+- none</p>
+<p><em>Note</em>: There is only <em>one</em> <code>&lt;document&gt;</code>-element allowed per DocumentRepresentation!</p>
+<p>Example:</p>
+<pre><code class="language-xml">&lt;document&gt;facsimiles/files/we_the_people.pdf&lt;/document&gt;
 </code></pre>
 <h4 id="text-prop-element"><code>&lt;text-prop&gt;</code>-element</h4>
 <p>The text property element is used to list text values.</p>
